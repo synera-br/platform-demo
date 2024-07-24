@@ -5,6 +5,7 @@ metadata:
   name: all-entities
 spec:
   targets:
-    - ./domain/all.yaml
     - ./groups/all.yaml
     - ./users/all.yaml
+    - ./domain/all.yaml
+    - ./system/all.yaml
