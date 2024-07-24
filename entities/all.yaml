@@ -6,3 +6,4 @@ metadata:
 spec:
   targets:
     - ./domain/all.yaml
+    - ./groups/all.yaml

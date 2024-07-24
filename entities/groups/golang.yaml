@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: golang
+  description: Equipe de desenvolvimento em golang
+spec:
+  type: equipe
+  profile:
+    displayName: golang
+    email: golang@.infra.synera.com.br
+  children: []

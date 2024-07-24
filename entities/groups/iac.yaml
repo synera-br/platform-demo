@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: infras-as-a-code
+  description: Equipe de infrastrutura como código
+spec:
+  type: equipe
+  profile:
+    displayName: iaac
+    email: iaac@.infra.synera.com.br
+  children: []

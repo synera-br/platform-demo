@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: cloud
+  description: Equipe de cloud
+spec:
+  type: equipe
+  profile:
+    displayName: Cloud
+    email: cloud@.infra.synera.com.br
+  children: []
