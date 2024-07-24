@@ -7,6 +7,4 @@ metadata:
 spec:
   type: organization
   owner: guest
-  children: []
-  dependsOn:
-    - domain:synera2
+  subdomainOf: domain:synera2
