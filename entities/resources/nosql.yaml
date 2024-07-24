@@ -4,6 +4,8 @@ kind: Resource
 metadata:
   name: mongo
   description: MongoDB
+  labels:
+    managedBy: terraform
   tags:
   - nosql
   - azure

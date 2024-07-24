@@ -4,6 +4,8 @@ kind: Resource
 metadata:
   name: sqs
   description: Simple Queue Service
+  labels:
+    managedBy: crossplane
   tags:
   - queue
   - aws

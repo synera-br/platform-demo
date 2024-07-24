@@ -4,6 +4,8 @@ kind: Resource
 metadata:
   name: redis
   description: Cache Redis
+  labels:
+    managedBy: terraform
   tags:
   - cache
   - azure

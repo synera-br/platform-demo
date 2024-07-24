@@ -4,6 +4,8 @@ kind: Resource
 metadata:
   name: eks
   description: Kubernetes service
+  labels:
+    managedBy: terraform
   tags:
   - k8s
   - aws
