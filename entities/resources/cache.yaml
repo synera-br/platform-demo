@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: redis
+  description: Cache Redis
+  tags:
+  - cache
+  - azure
+spec:
+  type: cache
+  owner: group:cloud
+  system: platform

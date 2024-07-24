@@ -3,6 +3,8 @@ kind: Group
 metadata:
   name: platform
   description: Equipe de que gerencia a developer platform
+  tags:
+  - centralizado
 spec:
   type: squad
   profile:

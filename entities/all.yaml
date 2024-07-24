@@ -9,3 +9,4 @@ spec:
     - ./users/all.yaml
     - ./domain/all.yaml
     - ./system/all.yaml
+    - ./resources/all.yaml

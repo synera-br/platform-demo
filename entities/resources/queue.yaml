@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: sqs
+  description: Simple Queue Service
+  tags:
+  - queue
+  - aws
+spec:
+  type: queue
+  owner: group:cloud
+  system: platform

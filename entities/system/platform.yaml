@@ -4,6 +4,11 @@ kind: System
 metadata:
   name: platform
   description: Developer platform
+  tags:
+  - developer
+  - portal
+  - platform
+  - performance
 spec:
   owner: group:platform
   domain: technology

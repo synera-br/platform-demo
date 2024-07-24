@@ -3,6 +3,8 @@ kind: Group
 metadata:
   name: golang
   description: Equipe de desenvolvimento em golang
+  tags:
+    - performance
 spec:
   type: equipe
   profile:

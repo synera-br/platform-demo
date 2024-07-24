@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: eks
+  description: Kubernetes service
+  tags:
+  - k8s
+  - aws
+spec:
+  type: kubernetes
+  owner: group:infras-as-a-code
+  system: platform

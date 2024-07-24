@@ -3,6 +3,8 @@ kind: Group
 metadata:
   name: cloud
   description: Equipe de cloud
+  tags:
+    - agilidade
 spec:
   type: equipe
   profile:

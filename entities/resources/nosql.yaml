@@ -1,0 +1,13 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: mongo
+  description: MongoDB
+  tags:
+  - nosql
+  - azure
+spec:
+  type: database
+  owner: group:cloud
+  system: platform

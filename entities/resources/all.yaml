@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  description: A collection of all resources from tenant
+  name: resources
+spec:
+  targets:
+    - ./sql.yaml
+    - ./nosql.yaml
+    - ./queue.yaml
+    - ./cache.yaml
+    - ./loadbalancer.yaml
+    - ./kubernetes.yaml
+

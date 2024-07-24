@@ -3,6 +3,8 @@ kind: Group
 metadata:
   name: infras-as-a-code
   description: Equipe de infrastrutura como código
+  tags:
+    - entregas
 spec:
   type: equipe
   profile:
