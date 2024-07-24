@@ -6,5 +6,5 @@ metadata:
   description: Area de tecnologia
 spec:
   type: organization
-  owner: guest
+  owner: group:iaac
   subdomainOf: domain:synera

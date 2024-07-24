@@ -6,5 +6,5 @@ metadata:
   description: Area de desenvolvimento
 spec:
   type: organization
-  owner: guest
+  owner: group:golang
   subdomainOf: domain:technology

@@ -6,5 +6,5 @@ metadata:
   description: Area de infrastructure
 spec:
   type: organization
-  owner: guest
+  owner: group:cloud
   subdomainOf: domain:technology
