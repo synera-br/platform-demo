@@ -1,0 +1,9 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: platform
+  description: Developer platform
+spec:
+  owner: group:platform
+  domain: technology
