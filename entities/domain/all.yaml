@@ -6,6 +6,6 @@ metadata:
 spec:
   targets:
     - ./tenant.yaml
-    - ./organization.yaml
+    - ./technology.yaml
     - ./infrastructure.yaml
     - ./develop.yaml
