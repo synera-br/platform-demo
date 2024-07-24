@@ -5,4 +5,5 @@ metadata:
   description: Area de tecnologia
 spec:
   type: organization
-  children: [domain:synera2]
+  parent:
+  - synera2
