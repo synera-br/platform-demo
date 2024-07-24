@@ -13,4 +13,5 @@ metadata:
 spec:
   type: tenant
   owner: guest
-  children: [technology]
+  children: []
+    
