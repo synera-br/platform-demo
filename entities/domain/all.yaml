@@ -7,3 +7,5 @@ spec:
   targets:
     - ./tenant.yaml
     - ./organization.yaml
+    - ./infrastructure.yaml
+    - ./develop.yaml

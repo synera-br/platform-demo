@@ -1,0 +1,10 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: infrastructure
+  description: Area de infrastructure
+spec:
+  type: organization
+  owner: guest
+  subdomainOf: domain:technology
