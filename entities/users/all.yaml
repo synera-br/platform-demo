@@ -5,7 +5,7 @@ metadata:
   name: users
 spec:
   targets:
-    - ./tenant.yaml
-    - ./technology.yaml
-    - ./infrastructure.yaml
-    - ./develop.yaml
+    - ./cloud.yaml
+    - ./golang.yaml
+    - ./iaac.yaml
+    - ./nodejs.yaml
