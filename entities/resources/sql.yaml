@@ -4,8 +4,8 @@ kind: Resource
 metadata:
   name: postgresql
   description: PostgreSQL
-  labels:
-    managedBy: crossplane
+  annotations:
+    synera.io/managedBy: crossplane
   tags:
   - sql
   - aws

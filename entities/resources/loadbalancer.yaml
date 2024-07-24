@@ -4,8 +4,8 @@ kind: Resource
 metadata:
   name: ingress
   description: Kong Ingress
-  labels:
-    managedBy: terraform
+  annotations:
+    synera.io/managedBy: terraform
   tags:
   - ingress
   - apis

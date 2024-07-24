@@ -4,8 +4,8 @@ kind: Resource
 metadata:
   name: redis
   description: Cache Redis
-  labels:
-    managedBy: terraform
+  annotations:
+    synera.io/managedBy: terraform
   tags:
   - cache
   - azure
