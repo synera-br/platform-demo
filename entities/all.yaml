@@ -10,3 +10,4 @@ spec:
     - ./domain/all.yaml
     - ./system/all.yaml
     - ./resources/all.yaml
+    - ./components/all.yaml
