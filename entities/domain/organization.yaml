@@ -7,5 +7,5 @@ metadata:
 spec:
   type: organization
   owner: guest
-  children:
-  - synera2
+  # children:
+  # - synera2
