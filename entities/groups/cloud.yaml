@@ -8,4 +8,4 @@ spec:
   profile:
     displayName: Cloud
     email: cloud@.infra.synera.com.br
-  children: []
+  children: [platform]

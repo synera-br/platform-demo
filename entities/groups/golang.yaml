@@ -8,4 +8,4 @@ spec:
   profile:
     displayName: golang
     email: golang@.infra.synera.com.br
-  children: []
+  children: [platform]

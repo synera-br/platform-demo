@@ -7,4 +7,5 @@ spec:
   targets:
     - ./cloud.yaml
     - ./iaac.yaml
-    - ./develop.yaml
+    - ./platform.yaml
+    - ./golang.yaml

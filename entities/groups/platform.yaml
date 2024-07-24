@@ -4,7 +4,7 @@ metadata:
   name: platform
   description: Equipe de que gerencia a developer platform
 spec:
-  type: equipe
+  type: squad
   profile:
     displayName: platform
     email: platform@.infra.synera.com.br

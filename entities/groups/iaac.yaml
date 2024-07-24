@@ -8,4 +8,4 @@ spec:
   profile:
     displayName: iaac
     email: iaac@.infra.synera.com.br
-  children: []
+  children: [platform]
