@@ -1,0 +1,20 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-terraform
+spec:
+  profile:
+    displayName: Developer 003
+    email: developer003@synera.com.br
+  memberOf: [iaac]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-argocd
+spec:
+  profile:
+    displayName: Developer 004
+    email: developer004@synera.com.br
+  memberOf: [iaac]

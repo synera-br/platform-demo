@@ -1,0 +1,20 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-aws
+spec:
+  profile:
+    displayName: Developer 001
+    email: developer001@synera.com.br
+  memberOf: [cloud]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-azure
+spec:
+  profile:
+    displayName: Developer 002
+    email: developer002@synera.com.br
+  memberOf: [cloud]

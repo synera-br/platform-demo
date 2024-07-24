@@ -1,0 +1,10 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-js
+spec:
+  profile:
+    displayName: Developer 006
+    email: developer006@synera.com.br
+  memberOf: [platform]

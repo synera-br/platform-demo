@@ -1,0 +1,10 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: developer-golang
+spec:
+  profile:
+    displayName: Developer 005
+    email: developer005@synera.com.br
+  memberOf: [golang]
