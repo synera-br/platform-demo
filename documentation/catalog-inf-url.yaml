@@ -1,0 +1,18 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  namespace: default
+  annotations:
+    backstage.io/techdocs-ref: url:https://github.com/synera-br/platform-demo/tree/main/documentation/main
+  name: doc-local
+  description: documentacao local by dir
+  tags:
+    - doc
+    - aws
+    - sync
+spec:
+  type: service
+  lifecycle: production
+  owner: group:cloud
+  system: platform
