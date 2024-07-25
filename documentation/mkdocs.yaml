@@ -1,0 +1,15 @@
+site_name: developer-portal
+site_description: Developer platform
+site_author: contato@synera.com.br
+
+plugins:
+  - techdocs-core
+
+theme:
+  name: material
+  font: false
+
+nav:
+  - Introduction: index.md
+  - integrations:
+    - Github: index.md
