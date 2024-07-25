@@ -4,7 +4,7 @@ kind: Component
 metadata:
   namespace: default
   annotations:
-    backstage.io/techdocs-ref: https://github.com/synera-br/platform-demo/tree/main/documentation
+    backstage.io/techdocs-ref: url:https://github.com/synera-br/platform-demo/tree/main/documentation
     backstage.io/view-url: https://github.com/Tomelin/desafio-stn/tree/develop/catalog/catalog.info.yaml
     backstage.io/edit-url: https://github.com/Tomelin/desafio-stn/edit/develop/catalog/catalog.info.yaml
     backstage.io/source-location: url:https://github.com/Tomelin/desafio-stn/tree/develop/catalog/
