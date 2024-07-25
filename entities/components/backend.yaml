@@ -22,9 +22,7 @@ spec:
   lifecycle: production
   owner: group:golang
   system: platform
-  providesApis:
-    - cloud
-  consumesApis: ['component:process']
+  consumesApis: ['handler-kubernetes']
   dependsOn:
     - 'resource:sqs'
     - 'resource:mongo'

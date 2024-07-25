@@ -5,7 +5,4 @@ metadata:
   name: apis
 spec:
   targets:
-    - ./tenant.yaml
-    - ./technology.yaml
-    - ./infrastructure.yaml
-    - ./develop.yaml
+    - ./handler-kubernetes.yaml

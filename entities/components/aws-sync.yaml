@@ -25,7 +25,7 @@ spec:
   system: platform
   providesApis:
     - cloud
-  consumesApis: ['component:process']
+  consumesApis: ['handler-kubernetes']
   dependsOn:
     - 'resource:sqs'
     - 'resource:postgresql'
