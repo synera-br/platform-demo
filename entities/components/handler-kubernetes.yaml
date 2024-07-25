@@ -10,7 +10,6 @@ metadata:
     snyk.io/org-id: 8516c00c-37c2-445e-858e-3a7feb69d38e
     snyk.io/targets: Tomelin/desafio-stn
     snyk.io/project-ids: 94807e09-fd98-416c-8971-5e3fbf33aba1
-    sonarqube.org/project-key: 'Tomelin_desafio-stn'
   name: handler-kubernetes
   description: Serviço que faz interação com alguns objetos do kubernetes
   tags:
