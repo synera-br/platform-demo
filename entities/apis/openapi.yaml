@@ -5125,10 +5125,10 @@ paths:
       description: create a new deployment in Kubernetes
       parameters:
         - description: Create a deployment
-        in: body
-        name: request
-        required: true
-        schema:
+          in: body
+          name: request
+          required: true
+          schema:
           $ref: '#/definitions/v1.Deployment'
       produces:
         - application/json
@@ -5155,10 +5155,10 @@ paths:
       description: get deployment by name from Kubernetes
       parameters:
         - description: found
-        in: path
-        name: name
-        required: true
-        type: string
+          in: path
+          name: name
+          required: true
+          type: string
       produces:
         - application/json
       responses:
@@ -5207,10 +5207,10 @@ paths:
       description: create a new namespace in Kubernetes
       parameters:
         - description: Create a namespace
-        in: body
-        name: request
-        required: true
-        schema:
+          in: body
+          name: request
+          required: true
+          schema:
           $ref: '#/definitions/v1.Namespace'
       produces:
         - application/json
@@ -5237,10 +5237,10 @@ paths:
       description: get namespace by name from Kubernetes
       parameters:
         - description: found
-        in: path
-        name: name
-        required: true
-        type: string
+          in: path
+          name: name
+          required: true
+          type: string
       produces:
         - application/json
       responses:
