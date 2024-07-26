@@ -4,6 +4,10 @@ kind: Domain
 metadata:
   name: synera
   description: Everything related to Synera tenant
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
 spec:
   type: tenant
   owner: guest

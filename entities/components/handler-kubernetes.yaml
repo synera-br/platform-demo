@@ -7,6 +7,10 @@ metadata:
     sonarqube.org/project-key: 'synera-br_platform-demo'
   name: handler-kubernetes
   description: Serviço que faz interação com alguns objetos do kubernetes
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - golang
     - cloud

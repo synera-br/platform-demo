@@ -3,6 +3,10 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: developer-aws
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
 spec:
   profile:
     displayName: Developer 001

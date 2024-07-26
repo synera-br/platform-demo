@@ -4,6 +4,10 @@ kind: Group
 metadata:
   name: golang
   description: Equipe de desenvolvimento em golang
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - performance
 spec:

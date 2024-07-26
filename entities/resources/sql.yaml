@@ -4,6 +4,10 @@ kind: Resource
 metadata:
   name: postgresql
   description: PostgreSQL
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   annotations:
     synera.io/managedBy: crossplane
   tags:

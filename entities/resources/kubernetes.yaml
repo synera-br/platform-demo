@@ -4,6 +4,10 @@ kind: Resource
 metadata:
   name: eks
   description: Kubernetes service
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   annotations:
     synera.io/managedBy: terraform
   tags:

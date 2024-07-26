@@ -4,6 +4,10 @@ kind: Domain
 metadata:
   name: develop
   description: Area de desenvolvimento
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
 spec:
   type: organization
   owner: group:golang

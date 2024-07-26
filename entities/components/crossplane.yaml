@@ -8,6 +8,10 @@ metadata:
     github.com/project-slug: 'synera-br/platform-demo'
   name: deploy-resources-cp
   description: Deploy de recursos cloud através do crossplane
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - iaac
     - cloud

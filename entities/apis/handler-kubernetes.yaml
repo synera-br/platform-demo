@@ -4,6 +4,10 @@ kind: API
 metadata:
   name: handler-kubernetes
   description: Serviço que faz interação com alguns objetos do kubernetes
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - golang
     - cloud

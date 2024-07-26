@@ -4,6 +4,10 @@ kind: System
 metadata:
   name: platform
   description: Developer platform
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - developer
     - portal

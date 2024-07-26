@@ -4,6 +4,10 @@ kind: Group
 metadata:
   name: cloud
   description: Equipe de cloud
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - agilidade
 spec:

@@ -8,6 +8,10 @@ metadata:
     github.com/project-slug: 'synera-br/platform-demo'
   name: deploy-resources-tf
   description: Deploy de recursos cloud através do terraform
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - iaac
     - cloud

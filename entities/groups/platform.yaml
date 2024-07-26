@@ -4,6 +4,10 @@ kind: Group
 metadata:
   name: platform
   description: Equipe de que gerencia a developer platform
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - centralizado
 spec:

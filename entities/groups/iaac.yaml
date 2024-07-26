@@ -4,6 +4,10 @@ kind: Group
 metadata:
   name: infras-as-a-code
   description: Equipe de infrastrutura como código
+  links:
+    - url: https://synera.com.br
+      title: Developer portal
+      icon: help
   tags:
     - entregas
 spec:
