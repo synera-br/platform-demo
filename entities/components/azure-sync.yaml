@@ -11,7 +11,7 @@ metadata:
     snyk.io/targets: Tomelin/desafio-stn
     snyk.io/project-ids: 94807e09-fd98-416c-8971-5e3fbf33aba1
     sonarqube.org/project-key: 'Tomelin_desafio-stn'
-    github.com/project-slug: 'Tomelin/desafio-stn'
+    github.com/project-slug: 'synera-br/platform-demo'
   name: azure-sync
   description: Valida status dos recursos da azure
   tags:
