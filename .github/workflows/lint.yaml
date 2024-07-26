@@ -1,5 +1,6 @@
 ---
 name: Yaml Lint
+run-name: Yaml Lint
 on: [push]
 jobs:
   lintAllTheThings:
