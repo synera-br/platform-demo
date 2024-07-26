@@ -1,3 +1,4 @@
+---
 site_name: developer-portal
 site_description: Developer platform
 site_author: contato@synera.com.br
@@ -12,4 +13,4 @@ theme:
 nav:
   - Introduction: index.md
   - integrations:
-    - Github: index.md
+      - Github: index.md
