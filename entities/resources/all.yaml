@@ -12,4 +12,3 @@ spec:
     - ./cache.yaml
     - ./loadbalancer.yaml
     - ./kubernetes.yaml
-

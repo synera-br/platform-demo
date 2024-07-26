@@ -8,6 +8,7 @@ spec:
     displayName: Developer 003
     email: contato@synera.com.br
   memberOf: [infras-as-a-code]
+
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User

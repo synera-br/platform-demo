@@ -5,7 +5,7 @@ metadata:
   name: platform
   description: Equipe de que gerencia a developer platform
   tags:
-  - centralizado
+    - centralizado
 spec:
   type: squad
   profile:

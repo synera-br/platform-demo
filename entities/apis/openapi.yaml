@@ -12,41 +12,41 @@ definitions:
     type: object
   intstr.Type:
     enum:
-    - 0
-    - 1
+      - 0
+      - 1
     type: integer
     x-enum-comments:
       Int: The IntOrString holds an int.
       String: The IntOrString holds a string.
     x-enum-varnames:
-    - Int
-    - String
+      - Int
+      - String
   k8s_io_api_core_v1.ConditionStatus:
     enum:
-    - "True"
-    - "False"
-    - Unknown
+      - "True"
+      - "False"
+      - Unknown
     type: string
     x-enum-varnames:
-    - ConditionTrue
-    - ConditionFalse
-    - ConditionUnknown
+      - ConditionTrue
+      - ConditionFalse
+      - ConditionUnknown
   resource.Quantity:
     properties:
       Format:
         enum:
-        - DecimalExponent
-        - BinarySI
-        - DecimalSI
+          - DecimalExponent
+          - BinarySI
+          - DecimalSI
         type: string
         x-enum-comments:
           BinarySI: e.g., 12Mi (12 * 2^20)
           DecimalExponent: e.g., 12e6
           DecimalSI: e.g., 12M  (12 * 10^6)
         x-enum-varnames:
-        - DecimalExponent
-        - BinarySI
-        - DecimalSI
+          - DecimalExponent
+          - BinarySI
+          - DecimalSI
     type: object
   v1.AWSElasticBlockStoreVolumeSource:
     properties:
@@ -83,19 +83,19 @@ definitions:
     properties:
       nodeAffinity:
         allOf:
-        - $ref: '#/definitions/v1.NodeAffinity'
+          - $ref: '#/definitions/v1.NodeAffinity'
         description: |-
           Describes node affinity scheduling rules for the pod.
           +optional
       podAffinity:
         allOf:
-        - $ref: '#/definitions/v1.PodAffinity'
+          - $ref: '#/definitions/v1.PodAffinity'
         description: |-
           Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
           +optional
       podAntiAffinity:
         allOf:
-        - $ref: '#/definitions/v1.PodAntiAffinity'
+          - $ref: '#/definitions/v1.PodAntiAffinity'
         description: |-
           Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
           +optional
@@ -112,50 +112,50 @@ definitions:
         type: string
       type:
         allOf:
-        - $ref: '#/definitions/v1.AppArmorProfileType'
+          - $ref: '#/definitions/v1.AppArmorProfileType'
         description: |-
           type indicates which kind of AppArmor profile will be applied.
           Valid options are:
-            Localhost - a profile pre-loaded on the node.
-            RuntimeDefault - the container runtime's default profile.
-            Unconfined - no AppArmor enforcement.
+            Localhost   - a profile pre-loaded on the node.
+            RuntimeDefault   - the container runtime's default profile.
+            Unconfined   - no AppArmor enforcement.
           +unionDiscriminator
     type: object
   v1.AppArmorProfileType:
     enum:
-    - Unconfined
-    - RuntimeDefault
-    - Localhost
+      - Unconfined
+      - RuntimeDefault
+      - Localhost
     type: string
     x-enum-varnames:
-    - AppArmorProfileTypeUnconfined
-    - AppArmorProfileTypeRuntimeDefault
-    - AppArmorProfileTypeLocalhost
+      - AppArmorProfileTypeUnconfined
+      - AppArmorProfileTypeRuntimeDefault
+      - AppArmorProfileTypeLocalhost
   v1.AzureDataDiskCachingMode:
     enum:
-    - None
-    - ReadOnly
-    - ReadWrite
+      - None
+      - ReadOnly
+      - ReadWrite
     type: string
     x-enum-varnames:
-    - AzureDataDiskCachingNone
-    - AzureDataDiskCachingReadOnly
-    - AzureDataDiskCachingReadWrite
+      - AzureDataDiskCachingNone
+      - AzureDataDiskCachingReadOnly
+      - AzureDataDiskCachingReadWrite
   v1.AzureDataDiskKind:
     enum:
-    - Shared
-    - Dedicated
-    - Managed
+      - Shared
+      - Dedicated
+      - Managed
     type: string
     x-enum-varnames:
-    - AzureSharedBlobDisk
-    - AzureDedicatedBlobDisk
-    - AzureManagedDisk
+      - AzureSharedBlobDisk
+      - AzureDedicatedBlobDisk
+      - AzureManagedDisk
   v1.AzureDiskVolumeSource:
     properties:
       cachingMode:
         allOf:
-        - $ref: '#/definitions/v1.AzureDataDiskCachingMode'
+          - $ref: '#/definitions/v1.AzureDataDiskCachingMode'
         description: |-
           cachingMode is the Host Caching mode: None, Read Only, Read Write.
           +optional
@@ -174,7 +174,7 @@ definitions:
         type: string
       kind:
         allOf:
-        - $ref: '#/definitions/v1.AzureDataDiskKind'
+          - $ref: '#/definitions/v1.AzureDataDiskKind'
         description: 'kind expected values are Shared: multiple blob disks per storage
           account  Dedicated: single blob disk per storage account  Managed: azure
           managed data disk (only in managed availability set). defaults to shared'
@@ -217,7 +217,7 @@ definitions:
         type: string
       nodePublishSecretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           nodePublishSecretRef is a reference to the secret object containing
           sensitive information to pass to the CSI driver to complete the CSI
@@ -289,7 +289,7 @@ definitions:
         type: string
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           secretRef is Optional: SecretRef is reference to the authentication secret for User, default is empty.
           More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
@@ -320,7 +320,7 @@ definitions:
         type: boolean
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           secretRef is optional: points to a secret object containing parameters used to connect
           to OpenStack.
@@ -358,7 +358,7 @@ definitions:
     properties:
       labelSelector:
         allOf:
-        - $ref: '#/definitions/v1.LabelSelector'
+          - $ref: '#/definitions/v1.LabelSelector'
         description: |-
           Select all ClusterTrustBundles that match this label selector.  Only has
           effect if signerName is set.  Mutually-exclusive with name.  If unset,
@@ -584,7 +584,7 @@ definitions:
         type: string
       imagePullPolicy:
         allOf:
-        - $ref: '#/definitions/v1.PullPolicy'
+          - $ref: '#/definitions/v1.PullPolicy'
         description: |-
           Image pull policy.
           One of Always, Never, IfNotPresent.
@@ -594,14 +594,14 @@ definitions:
           +optional
       lifecycle:
         allOf:
-        - $ref: '#/definitions/v1.Lifecycle'
+          - $ref: '#/definitions/v1.Lifecycle'
         description: |-
           Actions that the management system should take in response to container lifecycle events.
           Cannot be updated.
           +optional
       livenessProbe:
         allOf:
-        - $ref: '#/definitions/v1.Probe'
+          - $ref: '#/definitions/v1.Probe'
         description: |-
           Periodic probe of container liveness.
           Container will be restarted if the probe fails.
@@ -634,7 +634,7 @@ definitions:
         type: array
       readinessProbe:
         allOf:
-        - $ref: '#/definitions/v1.Probe'
+          - $ref: '#/definitions/v1.Probe'
         description: |-
           Periodic probe of container service readiness.
           Container will be removed from service endpoints if the probe fails.
@@ -652,7 +652,7 @@ definitions:
         type: array
       resources:
         allOf:
-        - $ref: '#/definitions/v1.ResourceRequirements'
+          - $ref: '#/definitions/v1.ResourceRequirements'
         description: |-
           Compute Resources required by this container.
           Cannot be updated.
@@ -660,7 +660,7 @@ definitions:
           +optional
       restartPolicy:
         allOf:
-        - $ref: '#/definitions/v1.ContainerRestartPolicy'
+          - $ref: '#/definitions/v1.ContainerRestartPolicy'
         description: |-
           RestartPolicy defines the restart behavior of individual containers in a pod.
           This field may only be set for init containers, and the only allowed value is "Always".
@@ -681,7 +681,7 @@ definitions:
           +optional
       securityContext:
         allOf:
-        - $ref: '#/definitions/v1.SecurityContext'
+          - $ref: '#/definitions/v1.SecurityContext'
         description: |-
           SecurityContext defines the security options the container should be run with.
           If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
@@ -689,7 +689,7 @@ definitions:
           +optional
       startupProbe:
         allOf:
-        - $ref: '#/definitions/v1.Probe'
+          - $ref: '#/definitions/v1.Probe'
         description: |-
           StartupProbe indicates that the Pod has successfully initialized.
           If specified, no other probes are executed until this completes successfully.
@@ -730,7 +730,7 @@ definitions:
         type: string
       terminationMessagePolicy:
         allOf:
-        - $ref: '#/definitions/v1.TerminationMessagePolicy'
+          - $ref: '#/definitions/v1.TerminationMessagePolicy'
         description: |-
           Indicate how the termination message should be populated. File will use the contents of
           terminationMessagePath to populate the container status message on both success and failure.
@@ -807,7 +807,7 @@ definitions:
         type: string
       protocol:
         allOf:
-        - $ref: '#/definitions/v1.Protocol'
+          - $ref: '#/definitions/v1.Protocol'
         description: |-
           Protocol for port. Must be UDP, TCP, or SCTP.
           Defaults to "TCP".
@@ -818,35 +818,35 @@ definitions:
     properties:
       resourceName:
         allOf:
-        - $ref: '#/definitions/v1.ResourceName'
+          - $ref: '#/definitions/v1.ResourceName'
         description: |-
           Name of the resource to which this resource resize policy applies.
           Supported values: cpu, memory.
       restartPolicy:
         allOf:
-        - $ref: '#/definitions/v1.ResourceResizeRestartPolicy'
+          - $ref: '#/definitions/v1.ResourceResizeRestartPolicy'
         description: |-
           Restart policy to apply when specified resource is resized.
           If not specified, it defaults to NotRequired.
     type: object
   v1.ContainerRestartPolicy:
     enum:
-    - Always
+      - Always
     type: string
     x-enum-varnames:
-    - ContainerRestartPolicyAlways
+      - ContainerRestartPolicyAlways
   v1.DNSPolicy:
     enum:
-    - ClusterFirstWithHostNet
-    - ClusterFirst
-    - Default
-    - None
+      - ClusterFirstWithHostNet
+      - ClusterFirst
+      - Default
+      - None
     type: string
     x-enum-varnames:
-    - DNSClusterFirstWithHostNet
-    - DNSClusterFirst
-    - DNSDefault
-    - DNSNone
+      - DNSClusterFirstWithHostNet
+      - DNSClusterFirst
+      - DNSDefault
+      - DNSNone
   v1.Deployment:
     properties:
       apiVersion:
@@ -868,20 +868,20 @@ definitions:
         type: string
       metadata:
         allOf:
-        - $ref: '#/definitions/v1.ObjectMeta'
+          - $ref: '#/definitions/v1.ObjectMeta'
         description: |-
           Standard object's metadata.
           More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
           +optional
       spec:
         allOf:
-        - $ref: '#/definitions/v1.DeploymentSpec'
+          - $ref: '#/definitions/v1.DeploymentSpec'
         description: |-
           Specification of the desired behavior of the Deployment.
           +optional
       status:
         allOf:
-        - $ref: '#/definitions/v1.DeploymentStatus'
+          - $ref: '#/definitions/v1.DeploymentStatus'
         description: |-
           Most recently observed status of the Deployment.
           +optional
@@ -902,23 +902,23 @@ definitions:
         type: string
       status:
         allOf:
-        - $ref: '#/definitions/k8s_io_api_core_v1.ConditionStatus'
+          - $ref: '#/definitions/k8s_io_api_core_v1.ConditionStatus'
         description: Status of the condition, one of True, False, Unknown.
       type:
         allOf:
-        - $ref: '#/definitions/v1.DeploymentConditionType'
+          - $ref: '#/definitions/v1.DeploymentConditionType'
         description: Type of deployment condition.
     type: object
   v1.DeploymentConditionType:
     enum:
-    - Available
-    - Progressing
-    - ReplicaFailure
+      - Available
+      - Progressing
+      - ReplicaFailure
     type: string
     x-enum-varnames:
-    - DeploymentAvailable
-    - DeploymentProgressing
-    - DeploymentReplicaFailure
+      - DeploymentAvailable
+      - DeploymentProgressing
+      - DeploymentReplicaFailure
   v1.DeploymentSpec:
     properties:
       minReadySeconds:
@@ -956,21 +956,21 @@ definitions:
         type: integer
       selector:
         allOf:
-        - $ref: '#/definitions/v1.LabelSelector'
+          - $ref: '#/definitions/v1.LabelSelector'
         description: |-
           Label selector for pods. Existing ReplicaSets whose pods are
           selected by this will be the ones affected by this deployment.
           It must match the pod template's labels.
       strategy:
         allOf:
-        - $ref: '#/definitions/v1.DeploymentStrategy'
+          - $ref: '#/definitions/v1.DeploymentStrategy'
         description: |-
           The deployment strategy to use to replace existing pods with new ones.
           +optional
           +patchStrategy=retainKeys
       template:
         allOf:
-        - $ref: '#/definitions/v1.PodTemplateSpec'
+          - $ref: '#/definitions/v1.PodTemplateSpec'
         description: |-
           Template describes the pods that will be created.
           The only allowed template.spec.restartPolicy value is "Always".
@@ -1031,7 +1031,7 @@ definitions:
     properties:
       rollingUpdate:
         allOf:
-        - $ref: '#/definitions/v1.RollingUpdateDeployment'
+          - $ref: '#/definitions/v1.RollingUpdateDeployment'
         description: |-
           Rolling update config params. Present only if DeploymentStrategyType =
           RollingUpdate.
@@ -1041,19 +1041,19 @@ definitions:
           +optional
       type:
         allOf:
-        - $ref: '#/definitions/v1.DeploymentStrategyType'
+          - $ref: '#/definitions/v1.DeploymentStrategyType'
         description: |-
           Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpdate.
           +optional
     type: object
   v1.DeploymentStrategyType:
     enum:
-    - Recreate
-    - RollingUpdate
+      - Recreate
+      - RollingUpdate
     type: string
     x-enum-varnames:
-    - RecreateDeploymentStrategyType
-    - RollingUpdateDeploymentStrategyType
+      - RecreateDeploymentStrategyType
+      - RollingUpdateDeploymentStrategyType
   v1.DownwardAPIProjection:
     properties:
       items:
@@ -1069,7 +1069,7 @@ definitions:
     properties:
       fieldRef:
         allOf:
-        - $ref: '#/definitions/v1.ObjectFieldSelector'
+          - $ref: '#/definitions/v1.ObjectFieldSelector'
         description: |-
           Required: Selects a field of the pod: only annotations, labels, name, namespace and uid are supported.
           +optional
@@ -1090,7 +1090,7 @@ definitions:
         type: string
       resourceFieldRef:
         allOf:
-        - $ref: '#/definitions/v1.ResourceFieldSelector'
+          - $ref: '#/definitions/v1.ResourceFieldSelector'
         description: |-
           Selects a resource of the container: only resources limits and requests
           (limits.cpu, limits.memory, requests.cpu and requests.memory) are currently supported.
@@ -1123,7 +1123,7 @@ definitions:
     properties:
       medium:
         allOf:
-        - $ref: '#/definitions/v1.StorageMedium'
+          - $ref: '#/definitions/v1.StorageMedium'
         description: |-
           medium represents what type of storage medium should back this directory.
           The default is "" which means to use the node's default medium.
@@ -1132,7 +1132,7 @@ definitions:
           +optional
       sizeLimit:
         allOf:
-        - $ref: '#/definitions/resource.Quantity'
+          - $ref: '#/definitions/resource.Quantity'
         description: |-
           sizeLimit is the total amount of local storage required for this EmptyDir volume.
           The size limit is also applicable for memory medium.
@@ -1146,7 +1146,7 @@ definitions:
     properties:
       configMapRef:
         allOf:
-        - $ref: '#/definitions/v1.ConfigMapEnvSource'
+          - $ref: '#/definitions/v1.ConfigMapEnvSource'
         description: |-
           The ConfigMap to select from
           +optional
@@ -1157,7 +1157,7 @@ definitions:
         type: string
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.SecretEnvSource'
+          - $ref: '#/definitions/v1.SecretEnvSource'
         description: |-
           The Secret to select from
           +optional
@@ -1182,7 +1182,7 @@ definitions:
         type: string
       valueFrom:
         allOf:
-        - $ref: '#/definitions/v1.EnvVarSource'
+          - $ref: '#/definitions/v1.EnvVarSource'
         description: |-
           Source for the environment variable's value. Cannot be used if value is not empty.
           +optional
@@ -1191,27 +1191,27 @@ definitions:
     properties:
       configMapKeyRef:
         allOf:
-        - $ref: '#/definitions/v1.ConfigMapKeySelector'
+          - $ref: '#/definitions/v1.ConfigMapKeySelector'
         description: |-
           Selects a key of a ConfigMap.
           +optional
       fieldRef:
         allOf:
-        - $ref: '#/definitions/v1.ObjectFieldSelector'
+          - $ref: '#/definitions/v1.ObjectFieldSelector'
         description: |-
           Selects a field of the pod: supports metadata.name, metadata.namespace, `metadata.labels['<KEY>']`, `metadata.annotations['<KEY>']`,
           spec.nodeName, spec.serviceAccountName, status.hostIP, status.podIP, status.podIPs.
           +optional
       resourceFieldRef:
         allOf:
-        - $ref: '#/definitions/v1.ResourceFieldSelector'
+          - $ref: '#/definitions/v1.ResourceFieldSelector'
         description: |-
           Selects a resource of the container: only resources limits and requests
           (limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.
           +optional
       secretKeyRef:
         allOf:
-        - $ref: '#/definitions/v1.SecretKeySelector'
+          - $ref: '#/definitions/v1.SecretKeySelector'
         description: |-
           Selects a key of a secret in the pod's namespace
           +optional
@@ -1280,7 +1280,7 @@ definitions:
         type: string
       imagePullPolicy:
         allOf:
-        - $ref: '#/definitions/v1.PullPolicy'
+          - $ref: '#/definitions/v1.PullPolicy'
         description: |-
           Image pull policy.
           One of Always, Never, IfNotPresent.
@@ -1290,13 +1290,13 @@ definitions:
           +optional
       lifecycle:
         allOf:
-        - $ref: '#/definitions/v1.Lifecycle'
+          - $ref: '#/definitions/v1.Lifecycle'
         description: |-
           Lifecycle is not allowed for ephemeral containers.
           +optional
       livenessProbe:
         allOf:
-        - $ref: '#/definitions/v1.Probe'
+          - $ref: '#/definitions/v1.Probe'
         description: |-
           Probes are not allowed for ephemeral containers.
           +optional
@@ -1319,7 +1319,7 @@ definitions:
         type: array
       readinessProbe:
         allOf:
-        - $ref: '#/definitions/v1.Probe'
+          - $ref: '#/definitions/v1.Probe'
         description: |-
           Probes are not allowed for ephemeral containers.
           +optional
@@ -1334,14 +1334,14 @@ definitions:
         type: array
       resources:
         allOf:
-        - $ref: '#/definitions/v1.ResourceRequirements'
+          - $ref: '#/definitions/v1.ResourceRequirements'
         description: |-
           Resources are not allowed for ephemeral containers. Ephemeral containers use spare resources
           already allocated to the pod.
           +optional
       restartPolicy:
         allOf:
-        - $ref: '#/definitions/v1.ContainerRestartPolicy'
+          - $ref: '#/definitions/v1.ContainerRestartPolicy'
         description: |-
           Restart policy for the container to manage the restart behavior of each
           container within a pod.
@@ -1351,14 +1351,14 @@ definitions:
           +optional
       securityContext:
         allOf:
-        - $ref: '#/definitions/v1.SecurityContext'
+          - $ref: '#/definitions/v1.SecurityContext'
         description: |-
           Optional: SecurityContext defines the security options the ephemeral container should be run with.
           If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
           +optional
       startupProbe:
         allOf:
-        - $ref: '#/definitions/v1.Probe'
+          - $ref: '#/definitions/v1.Probe'
         description: |-
           Probes are not allowed for ephemeral containers.
           +optional
@@ -1403,7 +1403,7 @@ definitions:
         type: string
       terminationMessagePolicy:
         allOf:
-        - $ref: '#/definitions/v1.TerminationMessagePolicy'
+          - $ref: '#/definitions/v1.TerminationMessagePolicy'
         description: |-
           Indicate how the termination message should be populated. File will use the contents of
           terminationMessagePath to populate the container status message on both success and failure.
@@ -1455,7 +1455,7 @@ definitions:
     properties:
       volumeClaimTemplate:
         allOf:
-        - $ref: '#/definitions/v1.PersistentVolumeClaimTemplate'
+          - $ref: '#/definitions/v1.PersistentVolumeClaimTemplate'
         description: |-
           Will be used to create a stand-alone PVC to provision the volume.
           The pod in which this EphemeralVolumeSource is embedded will be the
@@ -1537,10 +1537,10 @@ definitions:
     type: object
   v1.FinalizerName:
     enum:
-    - kubernetes
+      - kubernetes
     type: string
     x-enum-varnames:
-    - FinalizerKubernetes
+      - FinalizerKubernetes
   v1.FlexVolumeSource:
     properties:
       driver:
@@ -1568,7 +1568,7 @@ definitions:
         type: boolean
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           secretRef is Optional: secretRef is reference to the secret object containing
           sensitive information to pass to the plugin scripts. This may be
@@ -1702,14 +1702,14 @@ definitions:
         type: string
       port:
         allOf:
-        - $ref: '#/definitions/intstr.IntOrString'
+          - $ref: '#/definitions/intstr.IntOrString'
         description: |-
           Name or number of the port to access on the container.
           Number must be in the range 1 to 65535.
           Name must be an IANA_SVC_NAME.
       scheme:
         allOf:
-        - $ref: '#/definitions/v1.URIScheme'
+          - $ref: '#/definitions/v1.URIScheme'
         description: |-
           Scheme to use for connecting to the host.
           Defaults to HTTP.
@@ -1743,24 +1743,24 @@ definitions:
     type: object
   v1.HostPathType:
     enum:
-    - ""
-    - DirectoryOrCreate
-    - Directory
-    - FileOrCreate
-    - File
-    - Socket
-    - CharDevice
-    - BlockDevice
+      - ""
+      - DirectoryOrCreate
+      - Directory
+      - FileOrCreate
+      - File
+      - Socket
+      - CharDevice
+      - BlockDevice
     type: string
     x-enum-varnames:
-    - HostPathUnset
-    - HostPathDirectoryOrCreate
-    - HostPathDirectory
-    - HostPathFileOrCreate
-    - HostPathFile
-    - HostPathSocket
-    - HostPathCharDev
-    - HostPathBlockDev
+      - HostPathUnset
+      - HostPathDirectoryOrCreate
+      - HostPathDirectory
+      - HostPathFileOrCreate
+      - HostPathFile
+      - HostPathSocket
+      - HostPathCharDev
+      - HostPathBlockDev
   v1.HostPathVolumeSource:
     properties:
       path:
@@ -1771,7 +1771,7 @@ definitions:
         type: string
       type:
         allOf:
-        - $ref: '#/definitions/v1.HostPathType'
+          - $ref: '#/definitions/v1.HostPathType'
         description: |-
           type for HostPath Volume
           Defaults to ""
@@ -1835,7 +1835,7 @@ definitions:
         type: boolean
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           secretRef is the CHAP Secret for iSCSI target and initiator authentication
           +optional
@@ -1890,16 +1890,16 @@ definitions:
     type: object
   v1.LabelSelectorOperator:
     enum:
-    - In
-    - NotIn
-    - Exists
-    - DoesNotExist
+      - In
+      - NotIn
+      - Exists
+      - DoesNotExist
     type: string
     x-enum-varnames:
-    - LabelSelectorOpIn
-    - LabelSelectorOpNotIn
-    - LabelSelectorOpExists
-    - LabelSelectorOpDoesNotExist
+      - LabelSelectorOpIn
+      - LabelSelectorOpNotIn
+      - LabelSelectorOpExists
+      - LabelSelectorOpDoesNotExist
   v1.LabelSelectorRequirement:
     properties:
       key:
@@ -1907,7 +1907,7 @@ definitions:
         type: string
       operator:
         allOf:
-        - $ref: '#/definitions/v1.LabelSelectorOperator'
+          - $ref: '#/definitions/v1.LabelSelectorOperator'
         description: |-
           operator represents a key's relationship to a set of values.
           Valid operators are In, NotIn, Exists and DoesNotExist.
@@ -1927,7 +1927,7 @@ definitions:
     properties:
       postStart:
         allOf:
-        - $ref: '#/definitions/v1.LifecycleHandler'
+          - $ref: '#/definitions/v1.LifecycleHandler'
         description: |-
           PostStart is called immediately after a container is created. If the handler fails,
           the container is terminated and restarted according to its restart policy.
@@ -1936,7 +1936,7 @@ definitions:
           +optional
       preStop:
         allOf:
-        - $ref: '#/definitions/v1.LifecycleHandler'
+          - $ref: '#/definitions/v1.LifecycleHandler'
         description: |-
           PreStop is called immediately before a container is terminated due to an
           API request or management event such as liveness/startup probe failure,
@@ -1953,26 +1953,26 @@ definitions:
     properties:
       exec:
         allOf:
-        - $ref: '#/definitions/v1.ExecAction'
+          - $ref: '#/definitions/v1.ExecAction'
         description: |-
           Exec specifies the action to take.
           +optional
       httpGet:
         allOf:
-        - $ref: '#/definitions/v1.HTTPGetAction'
+          - $ref: '#/definitions/v1.HTTPGetAction'
         description: |-
           HTTPGet specifies the http request to perform.
           +optional
       sleep:
         allOf:
-        - $ref: '#/definitions/v1.SleepAction'
+          - $ref: '#/definitions/v1.SleepAction'
         description: |-
           Sleep represents the duration that the container should sleep before being terminated.
           +featureGate=PodLifecycleSleepAction
           +optional
       tcpSocket:
         allOf:
-        - $ref: '#/definitions/v1.TCPSocketAction'
+          - $ref: '#/definitions/v1.TCPSocketAction'
         description: |-
           Deprecated. TCPSocket is NOT supported as a LifecycleHandler and kept
           for the backward compatibility. There are no validation of this field and
@@ -2011,7 +2011,7 @@ definitions:
         type: string
       fieldsV1:
         allOf:
-        - $ref: '#/definitions/v1.FieldsV1'
+          - $ref: '#/definitions/v1.FieldsV1'
         description: |-
           FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.
           +optional
@@ -2020,7 +2020,7 @@ definitions:
         type: string
       operation:
         allOf:
-        - $ref: '#/definitions/v1.ManagedFieldsOperationType'
+          - $ref: '#/definitions/v1.ManagedFieldsOperationType'
         description: |-
           Operation is the type of operation which lead to this ManagedFieldsEntry being created.
           The only valid values for this field are 'Apply' and 'Update'.
@@ -2046,22 +2046,22 @@ definitions:
     type: object
   v1.ManagedFieldsOperationType:
     enum:
-    - Apply
-    - Update
+      - Apply
+      - Update
     type: string
     x-enum-varnames:
-    - ManagedFieldsOperationApply
-    - ManagedFieldsOperationUpdate
+      - ManagedFieldsOperationApply
+      - ManagedFieldsOperationUpdate
   v1.MountPropagationMode:
     enum:
-    - None
-    - HostToContainer
-    - Bidirectional
+      - None
+      - HostToContainer
+      - Bidirectional
     type: string
     x-enum-varnames:
-    - MountPropagationNone
-    - MountPropagationHostToContainer
-    - MountPropagationBidirectional
+      - MountPropagationNone
+      - MountPropagationHostToContainer
+      - MountPropagationBidirectional
   v1.NFSVolumeSource:
     properties:
       path:
@@ -2103,21 +2103,21 @@ definitions:
         type: string
       metadata:
         allOf:
-        - $ref: '#/definitions/v1.ObjectMeta'
+          - $ref: '#/definitions/v1.ObjectMeta'
         description: |-
           Standard object's metadata.
           More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
           +optional
       spec:
         allOf:
-        - $ref: '#/definitions/v1.NamespaceSpec'
+          - $ref: '#/definitions/v1.NamespaceSpec'
         description: |-
           Spec defines the behavior of the Namespace.
           More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
           +optional
       status:
         allOf:
-        - $ref: '#/definitions/v1.NamespaceStatus'
+          - $ref: '#/definitions/v1.NamespaceStatus'
         description: |-
           Status describes the current status of a Namespace.
           More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -2136,35 +2136,35 @@ definitions:
         type: string
       status:
         allOf:
-        - $ref: '#/definitions/k8s_io_api_core_v1.ConditionStatus'
+          - $ref: '#/definitions/k8s_io_api_core_v1.ConditionStatus'
         description: Status of the condition, one of True, False, Unknown.
       type:
         allOf:
-        - $ref: '#/definitions/v1.NamespaceConditionType'
+          - $ref: '#/definitions/v1.NamespaceConditionType'
         description: Type of namespace controller condition.
     type: object
   v1.NamespaceConditionType:
     enum:
-    - NamespaceDeletionDiscoveryFailure
-    - NamespaceDeletionContentFailure
-    - NamespaceDeletionGroupVersionParsingFailure
-    - NamespaceContentRemaining
-    - NamespaceFinalizersRemaining
+      - NamespaceDeletionDiscoveryFailure
+      - NamespaceDeletionContentFailure
+      - NamespaceDeletionGroupVersionParsingFailure
+      - NamespaceContentRemaining
+      - NamespaceFinalizersRemaining
     type: string
     x-enum-varnames:
-    - NamespaceDeletionDiscoveryFailure
-    - NamespaceDeletionContentFailure
-    - NamespaceDeletionGVParsingFailure
-    - NamespaceContentRemaining
-    - NamespaceFinalizersRemaining
+      - NamespaceDeletionDiscoveryFailure
+      - NamespaceDeletionContentFailure
+      - NamespaceDeletionGVParsingFailure
+      - NamespaceContentRemaining
+      - NamespaceFinalizersRemaining
   v1.NamespacePhase:
     enum:
-    - Active
-    - Terminating
+      - Active
+      - Terminating
     type: string
     x-enum-varnames:
-    - NamespaceActive
-    - NamespaceTerminating
+      - NamespaceActive
+      - NamespaceTerminating
   v1.NamespaceSpec:
     properties:
       finalizers:
@@ -2192,7 +2192,7 @@ definitions:
         type: array
       phase:
         allOf:
-        - $ref: '#/definitions/v1.NamespacePhase'
+          - $ref: '#/definitions/v1.NamespacePhase'
         description: |-
           Phase is the current lifecycle phase of the namespace.
           More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
@@ -2218,7 +2218,7 @@ definitions:
         type: array
       requiredDuringSchedulingIgnoredDuringExecution:
         allOf:
-        - $ref: '#/definitions/v1.NodeSelector'
+          - $ref: '#/definitions/v1.NodeSelector'
         description: |-
           If the affinity requirements specified by this field are not met at
           scheduling time, the pod will not be scheduled onto the node.
@@ -2229,12 +2229,12 @@ definitions:
     type: object
   v1.NodeInclusionPolicy:
     enum:
-    - Ignore
-    - Honor
+      - Ignore
+      - Honor
     type: string
     x-enum-varnames:
-    - NodeInclusionPolicyIgnore
-    - NodeInclusionPolicyHonor
+      - NodeInclusionPolicyIgnore
+      - NodeInclusionPolicyHonor
   v1.NodeSelector:
     properties:
       nodeSelectorTerms:
@@ -2247,20 +2247,20 @@ definitions:
     type: object
   v1.NodeSelectorOperator:
     enum:
-    - In
-    - NotIn
-    - Exists
-    - DoesNotExist
-    - Gt
-    - Lt
+      - In
+      - NotIn
+      - Exists
+      - DoesNotExist
+      - Gt
+      - Lt
     type: string
     x-enum-varnames:
-    - NodeSelectorOpIn
-    - NodeSelectorOpNotIn
-    - NodeSelectorOpExists
-    - NodeSelectorOpDoesNotExist
-    - NodeSelectorOpGt
-    - NodeSelectorOpLt
+      - NodeSelectorOpIn
+      - NodeSelectorOpNotIn
+      - NodeSelectorOpExists
+      - NodeSelectorOpDoesNotExist
+      - NodeSelectorOpGt
+      - NodeSelectorOpLt
   v1.NodeSelectorRequirement:
     properties:
       key:
@@ -2268,7 +2268,7 @@ definitions:
         type: string
       operator:
         allOf:
-        - $ref: '#/definitions/v1.NodeSelectorOperator'
+          - $ref: '#/definitions/v1.NodeSelectorOperator'
         description: |-
           Represents a key's relationship to a set of values.
           Valid operators are In, NotIn, Exists, DoesNotExist. Gt, and Lt.
@@ -2306,12 +2306,12 @@ definitions:
     type: object
   v1.OSName:
     enum:
-    - linux
-    - windows
+      - linux
+      - windows
     type: string
     x-enum-varnames:
-    - Linux
-    - Windows
+      - Linux
+      - Windows
   v1.ObjectFieldSelector:
     properties:
       apiVersion:
@@ -2459,7 +2459,7 @@ definitions:
         description: |-
           Namespace defines the space within which each name must be unique. An empty namespace is
           equivalent to the "default" namespace, but "default" is the canonical representation.
-          Not all objects are required to be scoped to a namespace - the value of this field for
+          Not all objects are required to be scoped to a namespace   - the value of this field for
           those objects will be empty.
 
           Must be a DNS_LABEL.
@@ -2552,16 +2552,16 @@ definitions:
     type: object
   v1.PersistentVolumeAccessMode:
     enum:
-    - ReadWriteOnce
-    - ReadOnlyMany
-    - ReadWriteMany
-    - ReadWriteOncePod
+      - ReadWriteOnce
+      - ReadOnlyMany
+      - ReadWriteMany
+      - ReadWriteOncePod
     type: string
     x-enum-varnames:
-    - ReadWriteOnce
-    - ReadOnlyMany
-    - ReadWriteMany
-    - ReadWriteOncePod
+      - ReadWriteOnce
+      - ReadOnlyMany
+      - ReadWriteMany
+      - ReadWriteOncePod
   v1.PersistentVolumeClaimSpec:
     properties:
       accessModes:
@@ -2575,7 +2575,7 @@ definitions:
         type: array
       dataSource:
         allOf:
-        - $ref: '#/definitions/v1.TypedLocalObjectReference'
+          - $ref: '#/definitions/v1.TypedLocalObjectReference'
         description: |-
           dataSource field can be used to specify either:
           * An existing VolumeSnapshot object (snapshot.storage.k8s.io/VolumeSnapshot)
@@ -2588,7 +2588,7 @@ definitions:
           +optional
       dataSourceRef:
         allOf:
-        - $ref: '#/definitions/v1.TypedObjectReference'
+          - $ref: '#/definitions/v1.TypedObjectReference'
         description: |-
           dataSourceRef specifies the object from which to populate the volume with data, if a non-empty
           volume is desired. This may be any object from a non-empty API group (non
@@ -2616,7 +2616,7 @@ definitions:
           +optional
       resources:
         allOf:
-        - $ref: '#/definitions/v1.VolumeResourceRequirements'
+          - $ref: '#/definitions/v1.VolumeResourceRequirements'
         description: |-
           resources represents the minimum resources the volume should have.
           If RecoverVolumeExpansionFailure feature is enabled users are allowed to specify resource requirements
@@ -2626,7 +2626,7 @@ definitions:
           +optional
       selector:
         allOf:
-        - $ref: '#/definitions/v1.LabelSelector'
+          - $ref: '#/definitions/v1.LabelSelector'
         description: |-
           selector is a label query over volumes to consider for binding.
           +optional
@@ -2655,7 +2655,7 @@ definitions:
         type: string
       volumeMode:
         allOf:
-        - $ref: '#/definitions/v1.PersistentVolumeMode'
+          - $ref: '#/definitions/v1.PersistentVolumeMode'
         description: |-
           volumeMode defines what type of volume is required by the claim.
           Value of Filesystem is implied when not included in claim spec.
@@ -2670,7 +2670,7 @@ definitions:
     properties:
       metadata:
         allOf:
-        - $ref: '#/definitions/v1.ObjectMeta'
+          - $ref: '#/definitions/v1.ObjectMeta'
         description: |-
           May contain labels and annotations that will be copied into the PVC
           when creating it. No other fields are allowed and will be rejected during
@@ -2679,7 +2679,7 @@ definitions:
           +optional
       spec:
         allOf:
-        - $ref: '#/definitions/v1.PersistentVolumeClaimSpec'
+          - $ref: '#/definitions/v1.PersistentVolumeClaimSpec'
         description: |-
           The specification for the PersistentVolumeClaim. The entire content is
           copied unchanged into the PVC that gets created from this
@@ -2702,12 +2702,12 @@ definitions:
     type: object
   v1.PersistentVolumeMode:
     enum:
-    - Block
-    - Filesystem
+      - Block
+      - Filesystem
     type: string
     x-enum-varnames:
-    - PersistentVolumeBlock
-    - PersistentVolumeFilesystem
+      - PersistentVolumeBlock
+      - PersistentVolumeFilesystem
   v1.PhotonPersistentDiskVolumeSource:
     properties:
       fsType:
@@ -2757,7 +2757,7 @@ definitions:
     properties:
       labelSelector:
         allOf:
-        - $ref: '#/definitions/v1.LabelSelector'
+          - $ref: '#/definitions/v1.LabelSelector'
         description: |-
           A label query over a set of resources, in this case pods.
           If it's null, this PodAffinityTerm matches with no Pods.
@@ -2796,7 +2796,7 @@ definitions:
         type: array
       namespaceSelector:
         allOf:
-        - $ref: '#/definitions/v1.LabelSelector'
+          - $ref: '#/definitions/v1.LabelSelector'
         description: |-
           A label query over the set of namespaces that the term applies to.
           The term is applied to the union of the namespaces selected by this field
@@ -2859,20 +2859,20 @@ definitions:
     type: object
   v1.PodConditionType:
     enum:
-    - ContainersReady
-    - Initialized
-    - Ready
-    - PodScheduled
-    - DisruptionTarget
-    - PodReadyToStartContainers
+      - ContainersReady
+      - Initialized
+      - Ready
+      - PodScheduled
+      - DisruptionTarget
+      - PodReadyToStartContainers
     type: string
     x-enum-varnames:
-    - ContainersReady
-    - PodInitialized
-    - PodReady
-    - PodScheduled
-    - DisruptionTarget
-    - PodReadyToStartContainers
+      - ContainersReady
+      - PodInitialized
+      - PodReady
+      - PodScheduled
+      - DisruptionTarget
+      - PodReadyToStartContainers
   v1.PodDNSConfig:
     properties:
       nameservers:
@@ -2918,17 +2918,17 @@ definitions:
     type: object
   v1.PodFSGroupChangePolicy:
     enum:
-    - OnRootMismatch
-    - Always
+      - OnRootMismatch
+      - Always
     type: string
     x-enum-varnames:
-    - FSGroupChangeOnRootMismatch
-    - FSGroupChangeAlways
+      - FSGroupChangeOnRootMismatch
+      - FSGroupChangeAlways
   v1.PodOS:
     properties:
       name:
         allOf:
-        - $ref: '#/definitions/v1.OSName'
+          - $ref: '#/definitions/v1.OSName'
         description: |-
           Name is the name of the operating system. The currently supported values are linux and windows.
           Additional value may be defined in future and can be one of:
@@ -2939,7 +2939,7 @@ definitions:
     properties:
       conditionType:
         allOf:
-        - $ref: '#/definitions/v1.PodConditionType'
+          - $ref: '#/definitions/v1.PodConditionType'
         description: ConditionType refers to a condition in the pod's condition list
           with matching type.
     type: object
@@ -2952,7 +2952,7 @@ definitions:
         type: string
       source:
         allOf:
-        - $ref: '#/definitions/v1.ClaimSource'
+          - $ref: '#/definitions/v1.ClaimSource'
         description: Source describes where to find the ResourceClaim.
     type: object
   v1.PodSchedulingGate:
@@ -2967,7 +2967,7 @@ definitions:
     properties:
       appArmorProfile:
         allOf:
-        - $ref: '#/definitions/v1.AppArmorProfile'
+          - $ref: '#/definitions/v1.AppArmorProfile'
         description: |-
           appArmorProfile is the AppArmor options to use by the containers in this pod.
           Note that this field cannot be set when spec.os.name is windows.
@@ -2988,7 +2988,7 @@ definitions:
         type: integer
       fsGroupChangePolicy:
         allOf:
-        - $ref: '#/definitions/v1.PodFSGroupChangePolicy'
+          - $ref: '#/definitions/v1.PodFSGroupChangePolicy'
         description: |-
           fsGroupChangePolicy defines behavior of changing ownership and permission of the volume
           before being exposed inside Pod. This field will only apply to
@@ -3030,7 +3030,7 @@ definitions:
         type: integer
       seLinuxOptions:
         allOf:
-        - $ref: '#/definitions/v1.SELinuxOptions'
+          - $ref: '#/definitions/v1.SELinuxOptions'
         description: |-
           The SELinux context to be applied to all containers.
           If unspecified, the container runtime will allocate a random SELinux context for each
@@ -3041,7 +3041,7 @@ definitions:
           +optional
       seccompProfile:
         allOf:
-        - $ref: '#/definitions/v1.SeccompProfile'
+          - $ref: '#/definitions/v1.SeccompProfile'
         description: |-
           The seccomp options to use by the containers in this pod.
           Note that this field cannot be set when spec.os.name is windows.
@@ -3072,7 +3072,7 @@ definitions:
         type: array
       windowsOptions:
         allOf:
-        - $ref: '#/definitions/v1.WindowsSecurityContextOptions'
+          - $ref: '#/definitions/v1.WindowsSecurityContextOptions'
         description: |-
           The Windows specific settings applied to all containers.
           If unspecified, the options within a container's SecurityContext will be used.
@@ -3091,7 +3091,7 @@ definitions:
         type: integer
       affinity:
         allOf:
-        - $ref: '#/definitions/v1.Affinity'
+          - $ref: '#/definitions/v1.Affinity'
         description: |-
           If specified, the pod's scheduling constraints
           +optional
@@ -3115,7 +3115,7 @@ definitions:
         type: array
       dnsConfig:
         allOf:
-        - $ref: '#/definitions/v1.PodDNSConfig'
+          - $ref: '#/definitions/v1.PodDNSConfig'
         description: |-
           Specifies the DNS parameters of a pod.
           Parameters specified here will be merged to the generated DNS
@@ -3123,7 +3123,7 @@ definitions:
           +optional
       dnsPolicy:
         allOf:
-        - $ref: '#/definitions/v1.DNSPolicy'
+          - $ref: '#/definitions/v1.DNSPolicy'
         description: |-
           Set DNS policy for the pod.
           Defaults to "ClusterFirst".
@@ -3261,7 +3261,7 @@ definitions:
         type: object
       os:
         allOf:
-        - $ref: '#/definitions/v1.PodOS'
+          - $ref: '#/definitions/v1.PodOS'
         description: |-
           Specifies the OS of the containers in the pod.
           Some pod and container fields are restricted if this is set.
@@ -3270,33 +3270,33 @@ definitions:
           -securityContext.windowsOptions
 
           If the OS field is set to windows, following fields must be unset:
-          - spec.hostPID
-          - spec.hostIPC
-          - spec.hostUsers
-          - spec.securityContext.appArmorProfile
-          - spec.securityContext.seLinuxOptions
-          - spec.securityContext.seccompProfile
-          - spec.securityContext.fsGroup
-          - spec.securityContext.fsGroupChangePolicy
-          - spec.securityContext.sysctls
-          - spec.shareProcessNamespace
-          - spec.securityContext.runAsUser
-          - spec.securityContext.runAsGroup
-          - spec.securityContext.supplementalGroups
-          - spec.containers[*].securityContext.appArmorProfile
-          - spec.containers[*].securityContext.seLinuxOptions
-          - spec.containers[*].securityContext.seccompProfile
-          - spec.containers[*].securityContext.capabilities
-          - spec.containers[*].securityContext.readOnlyRootFilesystem
-          - spec.containers[*].securityContext.privileged
-          - spec.containers[*].securityContext.allowPrivilegeEscalation
-          - spec.containers[*].securityContext.procMount
-          - spec.containers[*].securityContext.runAsUser
-          - spec.containers[*].securityContext.runAsGroup
+            - spec.hostPID
+            - spec.hostIPC
+            - spec.hostUsers
+            - spec.securityContext.appArmorProfile
+            - spec.securityContext.seLinuxOptions
+            - spec.securityContext.seccompProfile
+            - spec.securityContext.fsGroup
+            - spec.securityContext.fsGroupChangePolicy
+            - spec.securityContext.sysctls
+            - spec.shareProcessNamespace
+            - spec.securityContext.runAsUser
+            - spec.securityContext.runAsGroup
+            - spec.securityContext.supplementalGroups
+            - spec.containers[*].securityContext.appArmorProfile
+            - spec.containers[*].securityContext.seLinuxOptions
+            - spec.containers[*].securityContext.seccompProfile
+            - spec.containers[*].securityContext.capabilities
+            - spec.containers[*].securityContext.readOnlyRootFilesystem
+            - spec.containers[*].securityContext.privileged
+            - spec.containers[*].securityContext.allowPrivilegeEscalation
+            - spec.containers[*].securityContext.procMount
+            - spec.containers[*].securityContext.runAsUser
+            - spec.containers[*].securityContext.runAsGroup
           +optional
       overhead:
         allOf:
-        - $ref: '#/definitions/v1.ResourceList'
+          - $ref: '#/definitions/v1.ResourceList'
         description: |-
           Overhead represents the resource overhead associated with running a pod for a given RuntimeClass.
           This field will be autopopulated at admission time by the RuntimeClass admission controller. If
@@ -3308,7 +3308,7 @@ definitions:
           +optional
       preemptionPolicy:
         allOf:
-        - $ref: '#/definitions/v1.PreemptionPolicy'
+          - $ref: '#/definitions/v1.PreemptionPolicy'
         description: |-
           PreemptionPolicy is the Policy for preempting pods with lower priority.
           One of Never, PreemptLowerPriority.
@@ -3367,7 +3367,7 @@ definitions:
         type: array
       restartPolicy:
         allOf:
-        - $ref: '#/definitions/v1.RestartPolicy'
+          - $ref: '#/definitions/v1.RestartPolicy'
         description: |-
           Restart policy for all containers within the pod.
           One of Always, OnFailure, Never. In some contexts, only a subset of those values may be permitted.
@@ -3407,7 +3407,7 @@ definitions:
         type: array
       securityContext:
         allOf:
-        - $ref: '#/definitions/v1.PodSecurityContext'
+          - $ref: '#/definitions/v1.PodSecurityContext'
         description: |-
           SecurityContext holds pod-level security attributes and common container settings.
           Optional: Defaults to empty.  See type description for default values of each field.
@@ -3501,14 +3501,14 @@ definitions:
     properties:
       metadata:
         allOf:
-        - $ref: '#/definitions/v1.ObjectMeta'
+          - $ref: '#/definitions/v1.ObjectMeta'
         description: |-
           Standard object's metadata.
           More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
           +optional
       spec:
         allOf:
-        - $ref: '#/definitions/v1.PodSpec'
+          - $ref: '#/definitions/v1.PodSpec'
         description: |-
           Specification of the desired behavior of the pod.
           More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
@@ -3534,17 +3534,17 @@ definitions:
     type: object
   v1.PreemptionPolicy:
     enum:
-    - PreemptLowerPriority
-    - Never
+      - PreemptLowerPriority
+      - Never
     type: string
     x-enum-varnames:
-    - PreemptLowerPriority
-    - PreemptNever
+      - PreemptLowerPriority
+      - PreemptNever
   v1.PreferredSchedulingTerm:
     properties:
       preference:
         allOf:
-        - $ref: '#/definitions/v1.NodeSelectorTerm'
+          - $ref: '#/definitions/v1.NodeSelectorTerm'
         description: A node selector term, associated with the corresponding weight.
       weight:
         description: Weight associated with matching the corresponding nodeSelectorTerm,
@@ -3555,7 +3555,7 @@ definitions:
     properties:
       exec:
         allOf:
-        - $ref: '#/definitions/v1.ExecAction'
+          - $ref: '#/definitions/v1.ExecAction'
         description: |-
           Exec specifies the action to take.
           +optional
@@ -3567,13 +3567,13 @@ definitions:
         type: integer
       grpc:
         allOf:
-        - $ref: '#/definitions/v1.GRPCAction'
+          - $ref: '#/definitions/v1.GRPCAction'
         description: |-
           GRPC specifies an action involving a GRPC port.
           +optional
       httpGet:
         allOf:
-        - $ref: '#/definitions/v1.HTTPGetAction'
+          - $ref: '#/definitions/v1.HTTPGetAction'
         description: |-
           HTTPGet specifies the http request to perform.
           +optional
@@ -3597,7 +3597,7 @@ definitions:
         type: integer
       tcpSocket:
         allOf:
-        - $ref: '#/definitions/v1.TCPSocketAction'
+          - $ref: '#/definitions/v1.TCPSocketAction'
         description: |-
           TCPSocket specifies an action involving a TCP port.
           +optional
@@ -3625,12 +3625,12 @@ definitions:
     type: object
   v1.ProcMountType:
     enum:
-    - Default
-    - Unmasked
+      - Default
+      - Unmasked
     type: string
     x-enum-varnames:
-    - DefaultProcMount
-    - UnmaskedProcMount
+      - DefaultProcMount
+      - UnmaskedProcMount
   v1.ProjectedVolumeSource:
     properties:
       defaultMode:
@@ -3654,24 +3654,24 @@ definitions:
     type: object
   v1.Protocol:
     enum:
-    - TCP
-    - UDP
-    - SCTP
+      - TCP
+      - UDP
+      - SCTP
     type: string
     x-enum-varnames:
-    - ProtocolTCP
-    - ProtocolUDP
-    - ProtocolSCTP
+      - ProtocolTCP
+      - ProtocolUDP
+      - ProtocolSCTP
   v1.PullPolicy:
     enum:
-    - Always
-    - Never
-    - IfNotPresent
+      - Always
+      - Never
+      - IfNotPresent
     type: string
     x-enum-varnames:
-    - PullAlways
-    - PullNever
-    - PullIfNotPresent
+      - PullAlways
+      - PullNever
+      - PullIfNotPresent
   v1.QuobyteVolumeSource:
     properties:
       group:
@@ -3756,7 +3756,7 @@ definitions:
         type: boolean
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           secretRef is name of the authentication secret for RBDUser. If provided
           overrides keyring.
@@ -3773,14 +3773,14 @@ definitions:
     type: object
   v1.RecursiveReadOnlyMode:
     enum:
-    - Disabled
-    - IfPossible
-    - Enabled
+      - Disabled
+      - IfPossible
+      - Enabled
     type: string
     x-enum-varnames:
-    - RecursiveReadOnlyDisabled
-    - RecursiveReadOnlyIfPossible
-    - RecursiveReadOnlyEnabled
+      - RecursiveReadOnlyDisabled
+      - RecursiveReadOnlyIfPossible
+      - RecursiveReadOnlyEnabled
   v1.ResourceClaim:
     properties:
       name:
@@ -3799,7 +3799,7 @@ definitions:
         type: string
       divisor:
         allOf:
-        - $ref: '#/definitions/resource.Quantity'
+          - $ref: '#/definitions/resource.Quantity'
         description: |-
           Specifies the output format of the exposed resources, defaults to "1"
           +optional
@@ -3813,48 +3813,48 @@ definitions:
     type: object
   v1.ResourceName:
     enum:
-    - cpu
-    - memory
-    - storage
-    - ephemeral-storage
-    - pods
-    - services
-    - replicationcontrollers
-    - resourcequotas
-    - secrets
-    - configmaps
-    - persistentvolumeclaims
-    - services.nodeports
-    - services.loadbalancers
-    - requests.cpu
-    - requests.memory
-    - requests.storage
-    - requests.ephemeral-storage
-    - limits.cpu
-    - limits.memory
-    - limits.ephemeral-storage
+      - cpu
+      - memory
+      - storage
+      - ephemeral-storage
+      - pods
+      - services
+      - replicationcontrollers
+      - resourcequotas
+      - secrets
+      - configmaps
+      - persistentvolumeclaims
+      - services.nodeports
+      - services.loadbalancers
+      - requests.cpu
+      - requests.memory
+      - requests.storage
+      - requests.ephemeral-storage
+      - limits.cpu
+      - limits.memory
+      - limits.ephemeral-storage
     type: string
     x-enum-varnames:
-    - ResourceCPU
-    - ResourceMemory
-    - ResourceStorage
-    - ResourceEphemeralStorage
-    - ResourcePods
-    - ResourceServices
-    - ResourceReplicationControllers
-    - ResourceQuotas
-    - ResourceSecrets
-    - ResourceConfigMaps
-    - ResourcePersistentVolumeClaims
-    - ResourceServicesNodePorts
-    - ResourceServicesLoadBalancers
-    - ResourceRequestsCPU
-    - ResourceRequestsMemory
-    - ResourceRequestsStorage
-    - ResourceRequestsEphemeralStorage
-    - ResourceLimitsCPU
-    - ResourceLimitsMemory
-    - ResourceLimitsEphemeralStorage
+      - ResourceCPU
+      - ResourceMemory
+      - ResourceStorage
+      - ResourceEphemeralStorage
+      - ResourcePods
+      - ResourceServices
+      - ResourceReplicationControllers
+      - ResourceQuotas
+      - ResourceSecrets
+      - ResourceConfigMaps
+      - ResourcePersistentVolumeClaims
+      - ResourceServicesNodePorts
+      - ResourceServicesLoadBalancers
+      - ResourceRequestsCPU
+      - ResourceRequestsMemory
+      - ResourceRequestsStorage
+      - ResourceRequestsEphemeralStorage
+      - ResourceLimitsCPU
+      - ResourceLimitsMemory
+      - ResourceLimitsEphemeralStorage
   v1.ResourceRequirements:
     properties:
       claims:
@@ -3876,14 +3876,14 @@ definitions:
         type: array
       limits:
         allOf:
-        - $ref: '#/definitions/v1.ResourceList'
+          - $ref: '#/definitions/v1.ResourceList'
         description: |-
           Limits describes the maximum amount of compute resources allowed.
           More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
           +optional
       requests:
         allOf:
-        - $ref: '#/definitions/v1.ResourceList'
+          - $ref: '#/definitions/v1.ResourceList'
         description: |-
           Requests describes the minimum amount of compute resources required.
           If Requests is omitted for a container, it defaults to Limits if that is explicitly specified,
@@ -3893,27 +3893,27 @@ definitions:
     type: object
   v1.ResourceResizeRestartPolicy:
     enum:
-    - NotRequired
-    - RestartContainer
+      - NotRequired
+      - RestartContainer
     type: string
     x-enum-varnames:
-    - NotRequired
-    - RestartContainer
+      - NotRequired
+      - RestartContainer
   v1.RestartPolicy:
     enum:
-    - Always
-    - OnFailure
-    - Never
+      - Always
+      - OnFailure
+      - Never
     type: string
     x-enum-varnames:
-    - RestartPolicyAlways
-    - RestartPolicyOnFailure
-    - RestartPolicyNever
+      - RestartPolicyAlways
+      - RestartPolicyOnFailure
+      - RestartPolicyNever
   v1.RollingUpdateDeployment:
     properties:
       maxSurge:
         allOf:
-        - $ref: '#/definitions/intstr.IntOrString'
+          - $ref: '#/definitions/intstr.IntOrString'
         description: |-
           The maximum number of pods that can be scheduled above the desired number of
           pods.
@@ -3929,7 +3929,7 @@ definitions:
           +optional
       maxUnavailable:
         allOf:
-        - $ref: '#/definitions/intstr.IntOrString'
+          - $ref: '#/definitions/intstr.IntOrString'
         description: |-
           The maximum number of pods that can be unavailable during the update.
           Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%).
@@ -3992,7 +3992,7 @@ definitions:
         type: boolean
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           secretRef references to the secret for ScaleIO user and other
           sensitive information. If this is not provided, Login operation will fail.
@@ -4033,26 +4033,26 @@ definitions:
         type: string
       type:
         allOf:
-        - $ref: '#/definitions/v1.SeccompProfileType'
+          - $ref: '#/definitions/v1.SeccompProfileType'
         description: |-
           type indicates which kind of seccomp profile will be applied.
           Valid options are:
 
-          Localhost - a profile defined in a file on the node should be used.
-          RuntimeDefault - the container runtime default profile should be used.
-          Unconfined - no profile should be applied.
+          Localhost   - a profile defined in a file on the node should be used.
+          RuntimeDefault   - the container runtime default profile should be used.
+          Unconfined   - no profile should be applied.
           +unionDiscriminator
     type: object
   v1.SeccompProfileType:
     enum:
-    - Unconfined
-    - RuntimeDefault
-    - Localhost
+      - Unconfined
+      - RuntimeDefault
+      - Localhost
     type: string
     x-enum-varnames:
-    - SeccompProfileTypeUnconfined
-    - SeccompProfileTypeRuntimeDefault
-    - SeccompProfileTypeLocalhost
+      - SeccompProfileTypeUnconfined
+      - SeccompProfileTypeRuntimeDefault
+      - SeccompProfileTypeLocalhost
   v1.SecretEnvSource:
     properties:
       name:
@@ -4188,7 +4188,7 @@ definitions:
         type: boolean
       appArmorProfile:
         allOf:
-        - $ref: '#/definitions/v1.AppArmorProfile'
+          - $ref: '#/definitions/v1.AppArmorProfile'
         description: |-
           appArmorProfile is the AppArmor options to use by this container. If set, this profile
           overrides the pod's appArmorProfile.
@@ -4196,7 +4196,7 @@ definitions:
           +optional
       capabilities:
         allOf:
-        - $ref: '#/definitions/v1.Capabilities'
+          - $ref: '#/definitions/v1.Capabilities'
         description: |-
           The capabilities to add/drop when running containers.
           Defaults to the default set of capabilities granted by the container runtime.
@@ -4212,7 +4212,7 @@ definitions:
         type: boolean
       procMount:
         allOf:
-        - $ref: '#/definitions/v1.ProcMountType'
+          - $ref: '#/definitions/v1.ProcMountType'
         description: |-
           procMount denotes the type of proc mount to use for the containers.
           The default is DefaultProcMount which uses the container runtime defaults for
@@ -4257,7 +4257,7 @@ definitions:
         type: integer
       seLinuxOptions:
         allOf:
-        - $ref: '#/definitions/v1.SELinuxOptions'
+          - $ref: '#/definitions/v1.SELinuxOptions'
         description: |-
           The SELinux context to be applied to the container.
           If unspecified, the container runtime will allocate a random SELinux context for each
@@ -4267,7 +4267,7 @@ definitions:
           +optional
       seccompProfile:
         allOf:
-        - $ref: '#/definitions/v1.SeccompProfile'
+          - $ref: '#/definitions/v1.SeccompProfile'
         description: |-
           The seccomp options to use by this container. If seccomp options are
           provided at both the pod & container level, the container options
@@ -4276,7 +4276,7 @@ definitions:
           +optional
       windowsOptions:
         allOf:
-        - $ref: '#/definitions/v1.WindowsSecurityContextOptions'
+          - $ref: '#/definitions/v1.WindowsSecurityContextOptions'
         description: |-
           The Windows specific settings applied to all containers.
           If unspecified, the options from the PodSecurityContext will be used.
@@ -4318,10 +4318,10 @@ definitions:
     type: object
   v1.StorageMedium:
     enum:
-    - ""
-    - Memory
-    - HugePages
-    - HugePages-
+      - ""
+      - Memory
+      - HugePages
+      - HugePages-
     type: string
     x-enum-comments:
       StorageMediumDefault: use whatever the default is for the node, assume anything
@@ -4330,10 +4330,10 @@ definitions:
       StorageMediumHugePagesPrefix: prefix for full medium notation HugePages-<size>
       StorageMediumMemory: use memory (e.g. tmpfs on linux)
     x-enum-varnames:
-    - StorageMediumDefault
-    - StorageMediumMemory
-    - StorageMediumHugePages
-    - StorageMediumHugePagesPrefix
+      - StorageMediumDefault
+      - StorageMediumMemory
+      - StorageMediumHugePages
+      - StorageMediumHugePagesPrefix
   v1.StorageOSVolumeSource:
     properties:
       fsType:
@@ -4351,7 +4351,7 @@ definitions:
         type: boolean
       secretRef:
         allOf:
-        - $ref: '#/definitions/v1.LocalObjectReference'
+          - $ref: '#/definitions/v1.LocalObjectReference'
         description: |-
           secretRef specifies the secret to use for obtaining the StorageOS API
           credentials.  If not specified, default values will be attempted.
@@ -4390,7 +4390,7 @@ definitions:
         type: string
       port:
         allOf:
-        - $ref: '#/definitions/intstr.IntOrString'
+          - $ref: '#/definitions/intstr.IntOrString'
         description: |-
           Number or name of the port to access on the container.
           Number must be in the range 1 to 65535.
@@ -4398,27 +4398,27 @@ definitions:
     type: object
   v1.TaintEffect:
     enum:
-    - NoSchedule
-    - PreferNoSchedule
-    - NoExecute
+      - NoSchedule
+      - PreferNoSchedule
+      - NoExecute
     type: string
     x-enum-varnames:
-    - TaintEffectNoSchedule
-    - TaintEffectPreferNoSchedule
-    - TaintEffectNoExecute
+      - TaintEffectNoSchedule
+      - TaintEffectPreferNoSchedule
+      - TaintEffectNoExecute
   v1.TerminationMessagePolicy:
     enum:
-    - File
-    - FallbackToLogsOnError
+      - File
+      - FallbackToLogsOnError
     type: string
     x-enum-varnames:
-    - TerminationMessageReadFile
-    - TerminationMessageFallbackToLogsOnError
+      - TerminationMessageReadFile
+      - TerminationMessageFallbackToLogsOnError
   v1.Toleration:
     properties:
       effect:
         allOf:
-        - $ref: '#/definitions/v1.TaintEffect'
+          - $ref: '#/definitions/v1.TaintEffect'
         description: |-
           Effect indicates the taint effect to match. Empty means match all taint effects.
           When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
@@ -4431,7 +4431,7 @@ definitions:
         type: string
       operator:
         allOf:
-        - $ref: '#/definitions/v1.TolerationOperator'
+          - $ref: '#/definitions/v1.TolerationOperator'
         description: |-
           Operator represents a key's relationship to the value.
           Valid operators are Exists and Equal. Defaults to Equal.
@@ -4455,17 +4455,17 @@ definitions:
     type: object
   v1.TolerationOperator:
     enum:
-    - Exists
-    - Equal
+      - Exists
+      - Equal
     type: string
     x-enum-varnames:
-    - TolerationOpExists
-    - TolerationOpEqual
+      - TolerationOpExists
+      - TolerationOpEqual
   v1.TopologySpreadConstraint:
     properties:
       labelSelector:
         allOf:
-        - $ref: '#/definitions/v1.LabelSelector'
+          - $ref: '#/definitions/v1.LabelSelector'
         description: |-
           LabelSelector is used to find matching pods.
           Pods that match this label selector are counted to determine the number of pods
@@ -4503,10 +4503,10 @@ definitions:
           +-------+-------+-------+
           |  P P  |  P P  |   P   |
           +-------+-------+-------+
-          - if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 2/2/2;
+            - if MaxSkew is 1, incoming pod can only be scheduled to zone3 to become 2/2/2;
           scheduling it onto zone1(zone2) would make the ActualSkew(3-1) on zone1(zone2)
           violate MaxSkew(1).
-          - if MaxSkew is 2, incoming pod can be scheduled onto any zone.
+            - if MaxSkew is 2, incoming pod can be scheduled onto any zone.
           When `whenUnsatisfiable=ScheduleAnyway`, it is used to give higher precedence
           to topologies that satisfy it.
           It's a required field. Default value is 1 and 0 is not allowed.
@@ -4533,31 +4533,31 @@ definitions:
           +-------+-------+-------+
           The number of domains is less than 5(MinDomains), so "global minimum" is treated as 0.
           In this situation, new pod with the same labelSelector cannot be scheduled,
-          because computed skew will be 3(3 - 0) if new Pod is scheduled to any of the three zones,
+          because computed skew will be 3(3   - 0) if new Pod is scheduled to any of the three zones,
           it will violate MaxSkew.
           +optional
         type: integer
       nodeAffinityPolicy:
         allOf:
-        - $ref: '#/definitions/v1.NodeInclusionPolicy'
+          - $ref: '#/definitions/v1.NodeInclusionPolicy'
         description: |-
           NodeAffinityPolicy indicates how we will treat Pod's nodeAffinity/nodeSelector
           when calculating pod topology spread skew. Options are:
-          - Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations.
-          - Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations.
+            - Honor: only nodes matching nodeAffinity/nodeSelector are included in the calculations.
+            - Ignore: nodeAffinity/nodeSelector are ignored. All nodes are included in the calculations.
 
           If this value is nil, the behavior is equivalent to the Honor policy.
           This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag.
           +optional
       nodeTaintsPolicy:
         allOf:
-        - $ref: '#/definitions/v1.NodeInclusionPolicy'
+          - $ref: '#/definitions/v1.NodeInclusionPolicy'
         description: |-
           NodeTaintsPolicy indicates how we will treat node taints when calculating
           pod topology spread skew. Options are:
-          - Honor: nodes without taints, along with tainted nodes for which the incoming pod
+            - Honor: nodes without taints, along with tainted nodes for which the incoming pod
           has a toleration, are included.
-          - Ignore: node taints are ignored. All nodes are included.
+            - Ignore: node taints are ignored. All nodes are included.
 
           If this value is nil, the behavior is equivalent to the Ignore policy.
           This is a beta-level feature default enabled by the NodeInclusionPolicyInPodTopologySpread feature flag.
@@ -4577,12 +4577,12 @@ definitions:
         type: string
       whenUnsatisfiable:
         allOf:
-        - $ref: '#/definitions/v1.UnsatisfiableConstraintAction'
+          - $ref: '#/definitions/v1.UnsatisfiableConstraintAction'
         description: |-
           WhenUnsatisfiable indicates how to deal with a pod if it doesn't satisfy
           the spread constraint.
-          - DoNotSchedule (default) tells the scheduler not to schedule it.
-          - ScheduleAnyway tells the scheduler to schedule the pod in any location,
+            - DoNotSchedule (default) tells the scheduler not to schedule it.
+            - ScheduleAnyway tells the scheduler to schedule the pod in any location,
             but giving higher precedence to topologies that would help reduce the
             skew.
           A constraint is considered "Unsatisfiable" for an incoming pod
@@ -4643,25 +4643,25 @@ definitions:
     type: object
   v1.URIScheme:
     enum:
-    - HTTP
-    - HTTPS
+      - HTTP
+      - HTTPS
     type: string
     x-enum-varnames:
-    - URISchemeHTTP
-    - URISchemeHTTPS
+      - URISchemeHTTP
+      - URISchemeHTTPS
   v1.UnsatisfiableConstraintAction:
     enum:
-    - DoNotSchedule
-    - ScheduleAnyway
+      - DoNotSchedule
+      - ScheduleAnyway
     type: string
     x-enum-varnames:
-    - DoNotSchedule
-    - ScheduleAnyway
+      - DoNotSchedule
+      - ScheduleAnyway
   v1.Volume:
     properties:
       awsElasticBlockStore:
         allOf:
-        - $ref: '#/definitions/v1.AWSElasticBlockStoreVolumeSource'
+          - $ref: '#/definitions/v1.AWSElasticBlockStoreVolumeSource'
         description: |-
           awsElasticBlockStore represents an AWS Disk resource that is attached to a
           kubelet's host machine and then exposed to the pod.
@@ -4669,60 +4669,60 @@ definitions:
           +optional
       azureDisk:
         allOf:
-        - $ref: '#/definitions/v1.AzureDiskVolumeSource'
+          - $ref: '#/definitions/v1.AzureDiskVolumeSource'
         description: |-
           azureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
           +optional
       azureFile:
         allOf:
-        - $ref: '#/definitions/v1.AzureFileVolumeSource'
+          - $ref: '#/definitions/v1.AzureFileVolumeSource'
         description: |-
           azureFile represents an Azure File Service mount on the host and bind mount to the pod.
           +optional
       cephfs:
         allOf:
-        - $ref: '#/definitions/v1.CephFSVolumeSource'
+          - $ref: '#/definitions/v1.CephFSVolumeSource'
         description: |-
           cephFS represents a Ceph FS mount on the host that shares a pod's lifetime
           +optional
       cinder:
         allOf:
-        - $ref: '#/definitions/v1.CinderVolumeSource'
+          - $ref: '#/definitions/v1.CinderVolumeSource'
         description: |-
           cinder represents a cinder volume attached and mounted on kubelets host machine.
           More info: https://examples.k8s.io/mysql-cinder-pd/README.md
           +optional
       configMap:
         allOf:
-        - $ref: '#/definitions/v1.ConfigMapVolumeSource'
+          - $ref: '#/definitions/v1.ConfigMapVolumeSource'
         description: |-
           configMap represents a configMap that should populate this volume
           +optional
       csi:
         allOf:
-        - $ref: '#/definitions/v1.CSIVolumeSource'
+          - $ref: '#/definitions/v1.CSIVolumeSource'
         description: |-
           csi (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
           +optional
       downwardAPI:
         allOf:
-        - $ref: '#/definitions/v1.DownwardAPIVolumeSource'
+          - $ref: '#/definitions/v1.DownwardAPIVolumeSource'
         description: |-
           downwardAPI represents downward API about the pod that should populate this volume
           +optional
       emptyDir:
         allOf:
-        - $ref: '#/definitions/v1.EmptyDirVolumeSource'
+          - $ref: '#/definitions/v1.EmptyDirVolumeSource'
         description: |-
           emptyDir represents a temporary directory that shares a pod's lifetime.
           More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
           +optional
       ephemeral:
         allOf:
-        - $ref: '#/definitions/v1.EphemeralVolumeSource'
+          - $ref: '#/definitions/v1.EphemeralVolumeSource'
         description: |-
           ephemeral represents a volume that is handled by a cluster storage driver.
-          The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts,
+          The volume's lifecycle is tied to the pod that defines it   - it will be created before the pod starts,
           and deleted when the pod is removed.
 
           Use this if:
@@ -4740,7 +4740,7 @@ definitions:
           of an individual pod.
 
           Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to
-          be used that way - see the documentation of the driver for
+          be used that way   - see the documentation of the driver for
           more information.
 
           A pod can use both types of ephemeral volumes and
@@ -4749,26 +4749,26 @@ definitions:
           +optional
       fc:
         allOf:
-        - $ref: '#/definitions/v1.FCVolumeSource'
+          - $ref: '#/definitions/v1.FCVolumeSource'
         description: |-
           fc represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
           +optional
       flexVolume:
         allOf:
-        - $ref: '#/definitions/v1.FlexVolumeSource'
+          - $ref: '#/definitions/v1.FlexVolumeSource'
         description: |-
           flexVolume represents a generic volume resource that is
           provisioned/attached using an exec based plugin.
           +optional
       flocker:
         allOf:
-        - $ref: '#/definitions/v1.FlockerVolumeSource'
+          - $ref: '#/definitions/v1.FlockerVolumeSource'
         description: |-
           flocker represents a Flocker volume attached to a kubelet's host machine. This depends on the Flocker control service being running
           +optional
       gcePersistentDisk:
         allOf:
-        - $ref: '#/definitions/v1.GCEPersistentDiskVolumeSource'
+          - $ref: '#/definitions/v1.GCEPersistentDiskVolumeSource'
         description: |-
           gcePersistentDisk represents a GCE Disk resource that is attached to a
           kubelet's host machine and then exposed to the pod.
@@ -4776,7 +4776,7 @@ definitions:
           +optional
       gitRepo:
         allOf:
-        - $ref: '#/definitions/v1.GitRepoVolumeSource'
+          - $ref: '#/definitions/v1.GitRepoVolumeSource'
         description: |-
           gitRepo represents a git repository at a particular revision.
           DEPRECATED: GitRepo is deprecated. To provision a container with a git repo, mount an
@@ -4785,14 +4785,14 @@ definitions:
           +optional
       glusterfs:
         allOf:
-        - $ref: '#/definitions/v1.GlusterfsVolumeSource'
+          - $ref: '#/definitions/v1.GlusterfsVolumeSource'
         description: |-
           glusterfs represents a Glusterfs mount on the host that shares a pod's lifetime.
           More info: https://examples.k8s.io/volumes/glusterfs/README.md
           +optional
       hostPath:
         allOf:
-        - $ref: '#/definitions/v1.HostPathVolumeSource'
+          - $ref: '#/definitions/v1.HostPathVolumeSource'
         description: |-
           hostPath represents a pre-existing file or directory on the host
           machine that is directly exposed to the container. This is generally
@@ -4805,7 +4805,7 @@ definitions:
           +optional
       iscsi:
         allOf:
-        - $ref: '#/definitions/v1.ISCSIVolumeSource'
+          - $ref: '#/definitions/v1.ISCSIVolumeSource'
         description: |-
           iscsi represents an ISCSI Disk resource that is attached to a
           kubelet's host machine and then exposed to the pod.
@@ -4819,14 +4819,14 @@ definitions:
         type: string
       nfs:
         allOf:
-        - $ref: '#/definitions/v1.NFSVolumeSource'
+          - $ref: '#/definitions/v1.NFSVolumeSource'
         description: |-
           nfs represents an NFS mount on the host that shares a pod's lifetime
           More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs
           +optional
       persistentVolumeClaim:
         allOf:
-        - $ref: '#/definitions/v1.PersistentVolumeClaimVolumeSource'
+          - $ref: '#/definitions/v1.PersistentVolumeClaimVolumeSource'
         description: |-
           persistentVolumeClaimVolumeSource represents a reference to a
           PersistentVolumeClaim in the same namespace.
@@ -4834,55 +4834,55 @@ definitions:
           +optional
       photonPersistentDisk:
         allOf:
-        - $ref: '#/definitions/v1.PhotonPersistentDiskVolumeSource'
+          - $ref: '#/definitions/v1.PhotonPersistentDiskVolumeSource'
         description: photonPersistentDisk represents a PhotonController persistent
           disk attached and mounted on kubelets host machine
       portworxVolume:
         allOf:
-        - $ref: '#/definitions/v1.PortworxVolumeSource'
+          - $ref: '#/definitions/v1.PortworxVolumeSource'
         description: |-
           portworxVolume represents a portworx volume attached and mounted on kubelets host machine
           +optional
       projected:
         allOf:
-        - $ref: '#/definitions/v1.ProjectedVolumeSource'
+          - $ref: '#/definitions/v1.ProjectedVolumeSource'
         description: projected items for all in one resources secrets, configmaps,
           and downward API
       quobyte:
         allOf:
-        - $ref: '#/definitions/v1.QuobyteVolumeSource'
+          - $ref: '#/definitions/v1.QuobyteVolumeSource'
         description: |-
           quobyte represents a Quobyte mount on the host that shares a pod's lifetime
           +optional
       rbd:
         allOf:
-        - $ref: '#/definitions/v1.RBDVolumeSource'
+          - $ref: '#/definitions/v1.RBDVolumeSource'
         description: |-
           rbd represents a Rados Block Device mount on the host that shares a pod's lifetime.
           More info: https://examples.k8s.io/volumes/rbd/README.md
           +optional
       scaleIO:
         allOf:
-        - $ref: '#/definitions/v1.ScaleIOVolumeSource'
+          - $ref: '#/definitions/v1.ScaleIOVolumeSource'
         description: |-
           scaleIO represents a ScaleIO persistent volume attached and mounted on Kubernetes nodes.
           +optional
       secret:
         allOf:
-        - $ref: '#/definitions/v1.SecretVolumeSource'
+          - $ref: '#/definitions/v1.SecretVolumeSource'
         description: |-
           secret represents a secret that should populate this volume.
           More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
           +optional
       storageos:
         allOf:
-        - $ref: '#/definitions/v1.StorageOSVolumeSource'
+          - $ref: '#/definitions/v1.StorageOSVolumeSource'
         description: |-
           storageOS represents a StorageOS volume attached and mounted on Kubernetes nodes.
           +optional
       vsphereVolume:
         allOf:
-        - $ref: '#/definitions/v1.VsphereVirtualDiskVolumeSource'
+          - $ref: '#/definitions/v1.VsphereVirtualDiskVolumeSource'
         description: |-
           vsphereVolume represents a vSphere volume attached and mounted on kubelets host machine
           +optional
@@ -4906,7 +4906,7 @@ definitions:
         type: string
       mountPropagation:
         allOf:
-        - $ref: '#/definitions/v1.MountPropagationMode'
+          - $ref: '#/definitions/v1.MountPropagationMode'
         description: |-
           mountPropagation determines how mounts are propagated from the host
           to container and the other way around.
@@ -4926,7 +4926,7 @@ definitions:
         type: boolean
       recursiveReadOnly:
         allOf:
-        - $ref: '#/definitions/v1.RecursiveReadOnlyMode'
+          - $ref: '#/definitions/v1.RecursiveReadOnlyMode'
         description: |-
           RecursiveReadOnly specifies whether read-only mounts should be handled
           recursively.
@@ -4966,7 +4966,7 @@ definitions:
     properties:
       clusterTrustBundle:
         allOf:
-        - $ref: '#/definitions/v1.ClusterTrustBundleProjection'
+          - $ref: '#/definitions/v1.ClusterTrustBundleProjection'
         description: |-
           ClusterTrustBundle allows a pod to access the `.spec.trustBundle` field
           of ClusterTrustBundle objects in an auto-updating file.
@@ -4986,25 +4986,25 @@ definitions:
           +optional
       configMap:
         allOf:
-        - $ref: '#/definitions/v1.ConfigMapProjection'
+          - $ref: '#/definitions/v1.ConfigMapProjection'
         description: |-
           configMap information about the configMap data to project
           +optional
       downwardAPI:
         allOf:
-        - $ref: '#/definitions/v1.DownwardAPIProjection'
+          - $ref: '#/definitions/v1.DownwardAPIProjection'
         description: |-
           downwardAPI information about the downwardAPI data to project
           +optional
       secret:
         allOf:
-        - $ref: '#/definitions/v1.SecretProjection'
+          - $ref: '#/definitions/v1.SecretProjection'
         description: |-
           secret information about the secret data to project
           +optional
       serviceAccountToken:
         allOf:
-        - $ref: '#/definitions/v1.ServiceAccountTokenProjection'
+          - $ref: '#/definitions/v1.ServiceAccountTokenProjection'
         description: |-
           serviceAccountToken is information about the serviceAccountToken data to project
           +optional
@@ -5013,14 +5013,14 @@ definitions:
     properties:
       limits:
         allOf:
-        - $ref: '#/definitions/v1.ResourceList'
+          - $ref: '#/definitions/v1.ResourceList'
         description: |-
           Limits describes the maximum amount of compute resources allowed.
           More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
           +optional
       requests:
         allOf:
-        - $ref: '#/definitions/v1.ResourceList'
+          - $ref: '#/definitions/v1.ResourceList'
         description: |-
           Requests describes the minimum amount of compute resources required.
           If Requests is omitted for a container, it defaults to Limits if that is explicitly specified,
@@ -5055,7 +5055,7 @@ definitions:
     properties:
       podAffinityTerm:
         allOf:
-        - $ref: '#/definitions/v1.PodAffinityTerm'
+          - $ref: '#/definitions/v1.PodAffinityTerm'
         description: Required. A pod affinity term, associated with the corresponding
           weight.
       weight:
@@ -5105,10 +5105,10 @@ paths:
   /api/deployment:
     get:
       consumes:
-      - application/json
+        - application/json
       description: List all deployments from Kubernetes
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5118,20 +5118,20 @@ paths:
             type: array
       summary: list all deployments
       tags:
-      - deployment
+        - deployment
     post:
       consumes:
-      - application/json
+        - application/json
       description: create a new deployment in Kubernetes
       parameters:
-      - description: Create a deployment
+        - description: Create a deployment
         in: body
         name: request
         required: true
         schema:
           $ref: '#/definitions/v1.Deployment'
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5147,20 +5147,20 @@ paths:
             type: string
       summary: create a new deployment
       tags:
-      - deployment
+        - deployment
   /api/deployment/{name}:
     get:
       consumes:
-      - application/json
+        - application/json
       description: get deployment by name from Kubernetes
       parameters:
-      - description: found
+        - description: found
         in: path
         name: name
         required: true
         type: string
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5168,14 +5168,14 @@ paths:
             $ref: '#/definitions/v1.Deployment'
       summary: get deployment by name
       tags:
-      - deployment
+        - deployment
   /api/deployment/count:
     get:
       consumes:
-      - application/json
+        - application/json
       description: count the number of deployments
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5183,14 +5183,14 @@ paths:
             type: number
       summary: count deployments
       tags:
-      - deployment
+        - deployment
   /api/namespace:
     get:
       consumes:
-      - application/json
+        - application/json
       description: List all namespaces from Kubernetes
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5200,20 +5200,20 @@ paths:
             type: array
       summary: list all namespaces
       tags:
-      - namespace
+        - namespace
     post:
       consumes:
-      - application/json
+        - application/json
       description: create a new namespace in Kubernetes
       parameters:
-      - description: Create a namespace
+        - description: Create a namespace
         in: body
         name: request
         required: true
         schema:
           $ref: '#/definitions/v1.Namespace'
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5229,20 +5229,20 @@ paths:
             type: string
       summary: create a new namespace
       tags:
-      - namespace
+        - namespace
   /api/namespace/{name}:
     get:
       consumes:
-      - application/json
+        - application/json
       description: get namespace by name from Kubernetes
       parameters:
-      - description: found
+        - description: found
         in: path
         name: name
         required: true
         type: string
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5250,14 +5250,14 @@ paths:
             $ref: '#/definitions/v1.Namespace'
       summary: get namespace by name
       tags:
-      - namespace
+        - namespace
   /api/namespace/count:
     get:
       consumes:
-      - application/json
+        - application/json
       description: count the number of namespaces
       produces:
-      - application/json
+        - application/json
       responses:
         "200":
           description: OK
@@ -5265,5 +5265,5 @@ paths:
             type: number
       summary: count namespaces
       tags:
-      - namespace
+        - namespace
 swagger: "2.0"
