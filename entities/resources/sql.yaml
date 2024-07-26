@@ -7,8 +7,8 @@ metadata:
   annotations:
     synera.io/managedBy: crossplane
   tags:
-  - sql
-  - aws
+    - sql
+    - aws
 spec:
   type: database
   owner: group:cloud

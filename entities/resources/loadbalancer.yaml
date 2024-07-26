@@ -7,8 +7,8 @@ metadata:
   annotations:
     synera.io/managedBy: terraform
   tags:
-  - ingress
-  - apis
+    - ingress
+    - apis
 spec:
   type: loadbalancer
   owner: group:infras-as-a-code

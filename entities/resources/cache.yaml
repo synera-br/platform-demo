@@ -7,8 +7,8 @@ metadata:
   annotations:
     synera.io/managedBy: terraform
   tags:
-  - cache
-  - azure
+    - cache
+    - azure
 spec:
   type: cache
   owner: group:cloud
