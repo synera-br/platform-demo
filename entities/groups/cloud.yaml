@@ -9,5 +9,5 @@ spec:
   type: equipe
   profile:
     displayName: Cloud
-    email: cloud@.infra.synera.com.br
+    email: contato@synera.com.br
   children: [platform]

@@ -6,5 +6,5 @@ metadata:
 spec:
   profile:
     displayName: Developer 005
-    email: developer005@synera.com.br
+    email: contato@synera.com.br
   memberOf: [golang]

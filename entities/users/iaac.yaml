@@ -6,7 +6,7 @@ metadata:
 spec:
   profile:
     displayName: Developer 003
-    email: developer003@synera.com.br
+    email: contato@synera.com.br
   memberOf: [infras-as-a-code]
 ---
 apiVersion: backstage.io/v1alpha1
@@ -16,5 +16,5 @@ metadata:
 spec:
   profile:
     displayName: Developer 004
-    email: developer004@synera.com.br
+    email: contato@synera.com.br
   memberOf: [infras-as-a-code]

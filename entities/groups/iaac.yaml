@@ -9,5 +9,5 @@ spec:
   type: equipe
   profile:
     displayName: iaac
-    email: iaac@.infra.synera.com.br
+    email: contato@synera.com.br
   children: [platform]
