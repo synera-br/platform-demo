@@ -4,7 +4,7 @@ kind: Component
 metadata:
   namespace: default
   annotations:
-    sonarqube.org/project-key: 'Tomelin_fc-desafio-db'
+    sonarqube.org/project-key: 'Tomelin_desafio-stn'
     github.com/project-slug: 'synera-br/platform-demo'
   name: aws-sync
   description: Valida status dos recursos da aws
