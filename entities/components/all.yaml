@@ -2,7 +2,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Location
 metadata:
-  description: A collection of all components from tenant
+  description: A collection of all components from tenant.
   name: components
 spec:
   targets:
