@@ -3,8 +3,6 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   namespace: default
-  annotations:
-    sonarqube.org/project-key: 'synera-br_platform-demo'
   name: handler-kubernetes
   description: Serviço que faz interação com alguns objetos do kubernetes
   links:
